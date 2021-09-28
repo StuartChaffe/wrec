@@ -1,0 +1,8 @@
+.testimonial {
+	// background: red;
+	padding: var(--spacing-xl) var(--spacing-xxl);
+
+	.lead {
+		@extend .heading-3;
+	}
+}

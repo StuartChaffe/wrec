@@ -1,0 +1,10 @@
+.columns {
+	display: flex;
+	&-item {
+		text-align: center;
+		padding: var(--spacing-xl) var(--spacing-xxl);
+		p {
+			@extend .lead;
+		}
+	}
+}
