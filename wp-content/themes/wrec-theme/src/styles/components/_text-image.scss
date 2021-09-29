@@ -7,11 +7,12 @@
 	}
 	&--content {
 		width: 100%;
-		order: 2;
+		order: 1;
+		padding-bottom: var(--spacing);
 		@include mq(medium) {
-			order: 1;
 			width: 50%;
 			padding-right: var(--spacing-l);
+			padding-bottom: 0;
 		}
 		&__right {
 			order: 2;
@@ -24,18 +25,19 @@
 	&--image {
 		width: 100%;
 		order: 1;
-		padding-bottom: var(--spacing);
+		// padding-bottom: var(--spacing);
 		@include mq(medium) {
 			width: 50%;
-			padding-bottom: 0;
+			// padding-bottom: 0;
 		}
 		img {
 			width: 100%;
 		}
 
 		&__left {
-			order: 0;
+			order: 2;
 			@include mq(medium) {
+				order: 0;
 				padding-right: var(--spacing-l);
 			}
 		}

@@ -80,6 +80,21 @@ function wrec_acf_blocks() {
 				),
 			),
 		));
+		acf_register_block(array(
+			'name'				=> 'title-block',
+			'title'				=> __('Title block'),
+			'description'		=> __('Add a title block'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'menu',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'title' ),
+			'example'         => array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
 		// acf_register_block(array(
 		// 	'name'				=> 'accordion',
 		// 	'title'				=> __('Accordion'),
@@ -492,6 +507,7 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/testimonial',
 		'acf/cta',
 		'acf/text-image',
+		'acf/title-block',
 		// 'acf/accordion',
 		// 'acf/banner',
 		// 'acf/carousel',
