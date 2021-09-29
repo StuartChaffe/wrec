@@ -11,3 +11,9 @@
 // Components
 
 @import "components/*.scss";
+
+.wp-block {
+    max-width: var(--container);
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

@@ -2,14 +2,9 @@
 :root {
   --body-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --display-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-size: calc(1rem + 0.15vw);
-  --font-size-lead: calc(1.2rem + 0.1vw);
+  --font-size: calc(1.05rem + 0.15vw);
+  --font-size-lead: calc(1.4rem + 0.1vw);
   --font-size-small: calc(0.9rem + 0.1vw);
-  --font-size-h1: calc(2rem + 0.2vw);
-  --font-size-h2: calc(1.8rem + 0.2vw);
-  --font-size-h3: calc(1.5rem + 0.2vw);
-  --font-size-h4: calc(1.3rem + 0.2vw);
-  --font-size-h5: calc(1.2rem + 0.2vw);
   --font-weight-light: 100;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
@@ -47,6 +42,11 @@
   --container-small: 768px;
   --container: 1320px;
   --container-large: 1600px;
+  --font-size-h1: calc(3.2rem + 0.2vw);
+  --font-size-h2: calc(3rem + 0.2vw);
+  --font-size-h3: calc(2.4rem + 0.2vw);
+  --font-size-h4: calc(1.3rem + 0.2vw);
+  --font-size-h5: calc(1.2rem + 0.2vw);
 }
 @media (min-width: 70em) {
   :root {
@@ -156,13 +156,19 @@ select {
   }
 }
 p {
-  margin-bottom: var(--spacing-xs);
+  font-size: 15px;
+  margin-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  p {
+    font-size: var(--font-size);
+  }
 }
 p:last-of-type {
   margin-bottom: 0;
 }
 
-p.lead, .columns-item p {
+p.lead {
   font-size: var(--font-size-lead);
 }
 
@@ -203,7 +209,7 @@ a:hover {
 
 h1, .heading-1,
 h2, .heading-2,
-h3, .heading-3, .testimonial .lead, .testimonial .columns-item p, .columns-item .testimonial p,
+h3, .heading-3, .testimonial .lead,
 h4, .heading-4,
 h5, .heading-5 {
   margin: 0;
@@ -221,7 +227,7 @@ h2, .heading-2 {
   font-size: var(--font-size-h2);
 }
 
-h3, .heading-3, .testimonial .lead, .testimonial .columns-item p, .columns-item .testimonial p {
+h3, .heading-3, .testimonial .lead {
   font-size: var(--font-size-h3);
 }
 
@@ -265,7 +271,7 @@ pre {
 .btn {
   display: inline-block;
   border-radius: 0;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   border: none;
   color: white;
   background-color: var(--color-grey-dark);
@@ -275,6 +281,11 @@ pre {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   margin-top: var(--spacing);
+}
+@media (min-width: 50em) {
+  .btn {
+    padding: 1rem 2rem;
+  }
 }
 .btn:hover, .btn:focus {
   transform: scale(1.1, 1.1);
@@ -294,11 +305,27 @@ pre {
 
 .columns {
   display: flex;
+  flex-direction: column;
+  margin-left: -1.75rem;
+  margin-right: -1.75rem;
+}
+@media (min-width: 50em) {
+  .columns {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .columns-item {
   text-align: center;
-  padding: var(--spacing-xl) var(--spacing-xxl);
+  padding: var(--spacing-xl) var(--spacing-l);
 }
+@media (min-width: 50em) {
+  .columns-item {
+    padding: var(--spacing-xl) var(--spacing-xxl);
+  }
+}
+
 .content > * {
   max-width: var(--container);
   margin-right: auto;
@@ -733,9 +760,14 @@ ul.menu li {
 
 .container, .main, .global-footer__inner {
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1.75rem;
   width: 100%;
   max-width: var(--container-width);
+}
+@media (min-width: 50em) {
+  .container, .main, .global-footer__inner {
+    padding: 0 1rem;
+  }
 }
 
 .main {
@@ -797,4 +829,67 @@ body.nav-open {
 
 .testimonial {
   padding: var(--spacing-xl) var(--spacing-xxl);
+}
+.text-image {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 50em) {
+  .text-image {
+    flex-direction: row;
+  }
+}
+.text-image--content {
+  width: 100%;
+  order: 2;
+}
+@media (min-width: 50em) {
+  .text-image--content {
+    order: 1;
+    width: 50%;
+    padding-right: var(--spacing-l);
+  }
+}
+.text-image--content__right {
+  order: 2;
+}
+@media (min-width: 50em) {
+  .text-image--content__right {
+    padding-left: var(--spacing-l);
+    padding-right: 0;
+  }
+}
+.text-image--image {
+  width: 100%;
+  order: 1;
+  padding-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  .text-image--image {
+    width: 50%;
+    padding-bottom: 0;
+  }
+}
+.text-image--image img {
+  width: 100%;
+}
+.text-image--image__left {
+  order: 0;
+}
+@media (min-width: 50em) {
+  .text-image--image__left {
+    padding-right: var(--spacing-l);
+  }
+}
+@media (min-width: 50em) {
+  .text-image--image__right {
+    padding-left: var(--spacing-l);
+    order: 1;
+  }
+}
+
+.wp-block {
+  max-width: var(--container);
+  margin-left: auto !important;
+  margin-right: auto !important;
 }

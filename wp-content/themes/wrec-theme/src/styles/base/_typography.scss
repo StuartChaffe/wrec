@@ -1,5 +1,9 @@
 p {
-	margin-bottom: var(--spacing-xs);
+	font-size: 15px;
+	margin-bottom: var(--spacing);
+	@include mq(medium) {
+		font-size: var(--font-size);
+	}
 	&:last-of-type {
 		margin-bottom: 0;
 	}

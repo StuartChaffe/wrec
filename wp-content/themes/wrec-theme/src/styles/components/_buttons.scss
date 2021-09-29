@@ -1,7 +1,7 @@
 .btn {
 	display: inline-block;
 	border-radius: 0;
-	padding: 1rem 2rem;
+	padding: 0.5rem 1.5rem;
 	border: none;
 	color: white;
 	background-color: var(--color-grey-dark);
@@ -13,6 +13,9 @@
 	cursor: pointer;
 	transition: all 0.1s ease-in-out;
 	margin-top: var(--spacing);
+	@include mq(medium) {
+		padding: 1rem 2rem;
+	}
 
 	&:hover, &:focus {
 		transform: scale(1.1,1.1);

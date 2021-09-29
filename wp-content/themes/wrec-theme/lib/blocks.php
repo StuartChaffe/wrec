@@ -24,8 +24,11 @@ function wrec_acf_blocks() {
 			'render_callback'	=> 'wrec_acf_block_render_callback',
 			'category'			=> 'wrec-blocks',
 			'icon'				=> 'columns',
-			'align' 			=> 'full',
+			'align' 			=> 'wide',
 			'keywords'			=> array( 'cols, columns' ),
+			'supports'	=> array(
+				'align' => 'wide',
+			),
 			'example'         => array(
 				'attributes' => array(
 					'mode' => 'preview',
@@ -39,7 +42,7 @@ function wrec_acf_blocks() {
 			'render_callback'	=> 'wrec_acf_block_render_callback',
 			'category'			=> 'wrec-blocks',
 			'icon'				=> 'format-status',
-			'align' 			=> 'full',
+			'align' 			=> 'wide',
 			'keywords'			=> array( 'testimonial, quote' ),
 			'example'         => array(
 				'attributes' => array(
@@ -54,8 +57,23 @@ function wrec_acf_blocks() {
 			'render_callback'	=> 'wrec_acf_block_render_callback',
 			'category'			=> 'wrec-blocks',
 			'icon'				=> 'megaphone',
-			'align' 			=> 'full',
+			'align' 			=> 'wide',
 			'keywords'			=> array( 'cta, call to action' ),
+			'example'         => array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'text-image',
+			'title'				=> __('Text with image'),
+			'description'		=> __('Add a standard text with image block'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'align-pull-right',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'content, text, image' ),
 			'example'         => array(
 				'attributes' => array(
 					'mode' => 'preview',
@@ -314,21 +332,6 @@ function wrec_acf_blocks() {
 		// 	),
 		// ));
 		// acf_register_block(array(
-		// 	'name'				=> 'text-block',
-		// 	'title'				=> __('Text block'),
-		// 	'description'		=> __('Add a standard text block'),
-		// 	'render_callback'	=> 'wrec_acf_block_render_callback',
-		// 	'category'			=> 'wrec-blocks',
-		// 	'icon'				=> 'text-page',
-		// 	'align' 			=> 'full',
-		// 	'keywords'			=> array( 'content, text' ),
-		// 	'example'         => array(
-		// 		'attributes' => array(
-		// 			'mode' => 'preview',
-		// 		),
-		// 	),
-		// ));
-		// acf_register_block(array(
 		// 	'name'				=> 'intro-block',
 		// 	'title'				=> __('Intro block'),
 		// 	'description'		=> __('Add an intro text block'),
@@ -488,6 +491,7 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/columns',
 		'acf/testimonial',
 		'acf/cta',
+		'acf/text-image',
 		// 'acf/accordion',
 		// 'acf/banner',
 		// 'acf/carousel',
