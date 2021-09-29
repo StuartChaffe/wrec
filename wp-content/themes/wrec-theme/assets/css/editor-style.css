@@ -44,7 +44,7 @@
   --container-large: 1600px;
   --font-size-h1: calc(3.2rem + 0.2vw);
   --font-size-h2: calc(3rem + 0.2vw);
-  --font-size-h3: calc(2.4rem + 0.2vw);
+  --font-size-h3: calc(1.8rem + 0.2vw);
   --font-size-h4: calc(1.3rem + 0.2vw);
   --font-size-h5: calc(1.2rem + 0.2vw);
 }
@@ -423,8 +423,13 @@ pre {
 }
 
 .cta {
-  padding: var(--spacing-xl) var(--spacing-xxl);
+  padding: var(--spacing);
   text-align: center;
+}
+@media (min-width: 50em) {
+  .cta {
+    padding: var(--spacing-xl) var(--spacing-xxl);
+  }
 }
 
 .global-footer {
@@ -828,7 +833,12 @@ body.nav-open {
 }
 
 .testimonial {
-  padding: var(--spacing-xl) var(--spacing-xxl);
+  padding: var(--spacing);
+}
+@media (min-width: 50em) {
+  .testimonial {
+    padding: var(--spacing-xl) var(--spacing-xxl);
+  }
 }
 .text-image {
   display: flex;

@@ -1,6 +1,8 @@
 .testimonial {
-	// background: red;
-	padding: var(--spacing-xl) var(--spacing-xxl);
+	padding: var(--spacing);
+	@include mq(medium) {
+		padding: var(--spacing-xl) var(--spacing-xxl);
+	}
 
 	.lead {
 		@extend .heading-3;

@@ -1,4 +1,7 @@
 .cta {
-	padding: var(--spacing-xl) var(--spacing-xxl);
+	padding: var(--spacing);
 	text-align: center;
+	@include mq(medium) {
+		padding: var(--spacing-xl) var(--spacing-xxl);
+	}
 }
