@@ -1042,7 +1042,6 @@ body.nav-open {
 }
 
 .link-list {
-  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1076,6 +1075,22 @@ body.nav-open {
   color: white;
   text-decoration: none;
   transform: scale(1.1, 1.1);
+}
+.link-list-item--image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(33vw - 60px);
+  max-height: 350px;
+}
+.link-list-item--image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  min-width: 100%;
+  min-height: calc(100% + 2px);
 }
 .link-list-item--content {
   padding: var(--spacing);

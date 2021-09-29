@@ -5,8 +5,7 @@
 ?>
 <?php
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-	$news = new WP_Query( array(
+	$posts = new WP_Query( array(
 		'post_type' => 'post',
 		'posts_per_page' => 10,
 		'orderby' => 'date',
@@ -17,35 +16,26 @@
 	global $wp_query;
 	$tmp_query = $wp_query;
 	$wp_query = null;
-	$wp_query = $news;
+	$wp_query = $posts;
 
 	$counter = 1;
 ?>
-
-<section class="posts">
-	<?php while ( have_posts() ) : the_post(); ?>
-
-		<div class="posts-item">
-
-		<?php if ( has_post_thumbnail() ) { ?>
-			<div class="posts-item__image">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail(); ?>
-				<?php endif; ?>
+<?php if ($posts->have_posts()) : ?>
+	<section class="posts link-list theme--blue">
+		<?php while($posts->have_posts()) : $posts->the_post(); ?>
+		<?php
+			$images = get_field('images', get_the_ID());
+			$image = get_field('square_image', get_the_ID());
+		?>
+		<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item" title="Permalink to <?php the_title(); ?>">
+			<div class="link-list-item--image">
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
-			<div class="posts-item__content">
-				<h3><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
-				<p><?php the_excerpt(); ?></p>
-				<a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>">Read more ></a>
+			<div class="link-list-item--content">
+				<p><?php the_title(); ?></p>
 			</div>
-
-			<?php } else { ?>
-			<div class="posts-item__content--full">
-				<h3><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h3>
-				<p><?php the_excerpt(); ?></p>
-				<a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>">Read more ></a>
-			</div>
-		<?php } ?>
-		</div>
-	<?php endwhile; ?>
-</section>
+		</a>
+			
+		<?php endwhile; wp_reset_query(); ?>
+	</section>
+<?php endif; ?>
