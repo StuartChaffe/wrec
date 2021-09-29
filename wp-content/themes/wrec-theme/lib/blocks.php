@@ -26,9 +26,6 @@ function wrec_acf_blocks() {
 			'icon'				=> 'columns',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'cols, columns' ),
-			'supports'	=> array(
-				'align' => 'wide',
-			),
 			'example'         => array(
 				'attributes' => array(
 					'mode' => 'preview',
@@ -44,7 +41,7 @@ function wrec_acf_blocks() {
 			'icon'				=> 'format-status',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'testimonial, quote' ),
-			'example'         => array(
+			'example'			=> array(
 				'attributes' => array(
 					'mode' => 'preview',
 				),
@@ -59,7 +56,7 @@ function wrec_acf_blocks() {
 			'icon'				=> 'megaphone',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'cta, call to action' ),
-			'example'         => array(
+			'example'			=> array(
 				'attributes' => array(
 					'mode' => 'preview',
 				),
@@ -74,7 +71,7 @@ function wrec_acf_blocks() {
 			'icon'				=> 'align-pull-right',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'content, text, image' ),
-			'example'         => array(
+			'example'			=> array(
 				'attributes' => array(
 					'mode' => 'preview',
 				),
@@ -89,7 +86,52 @@ function wrec_acf_blocks() {
 			'icon'				=> 'menu',
 			'align' 			=> 'wide',
 			'keywords'			=> array( 'title' ),
-			'example'         => array(
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'posts',
+			'title'				=> __('All posts'),
+			'description'		=> __('Add all posts'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'calendar-alt',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'posts, blogs' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'careers',
+			'title'				=> __('All careers'),
+			'description'		=> __('Add all careers'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'admin-users',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'careers, jobs' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'courses',
+			'title'				=> __('All courses'),
+			'description'		=> __('Add all courses'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'controls-play',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'courses' ),
+			'example'			=> array(
 				'attributes' => array(
 					'mode' => 'preview',
 				),
@@ -508,6 +550,9 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/cta',
 		'acf/text-image',
 		'acf/title-block',
+		'acf/posts',
+		'acf/careers',
+		'acf/courses',
 		// 'acf/accordion',
 		// 'acf/banner',
 		// 'acf/carousel',

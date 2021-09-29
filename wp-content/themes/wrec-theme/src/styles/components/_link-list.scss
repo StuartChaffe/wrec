@@ -1,0 +1,39 @@
+.link-list {
+	background-color: var(--color-primary);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: var(--spacing);
+	@include mq(medium) {
+		flex-direction: row;
+		padding: var(--spacing-l);
+	}
+    @include mq(large) {
+		padding: var(--spacing-xl);
+	}
+
+	&-item {
+		background: var(--color-grey-dark);
+		color: white;
+		transition: transform 0.1s ease-in-out;
+		width: calc(100% / 3 - 20px);
+		margin: 0 calc(var(--spacing) / 2) var(--spacing) calc(var(--spacing) / 2)  ;
+
+		&:nth-child(3n+1) {
+			margin-left: 0;
+		}
+		&:nth-child(3n+3) {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: white;
+			text-decoration: none;
+			transform: scale(1.1,1.1);
+		}
+
+		&--content {
+			padding: var(--spacing);
+		}
+	}
+}

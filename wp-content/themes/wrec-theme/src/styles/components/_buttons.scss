@@ -11,7 +11,7 @@
 	font-size: var(--font-size-lead);
 	text-align: center;
 	cursor: pointer;
-	transition: all 0.1s ease-in-out;
+	transition: transform 0.1s ease-in-out;
 	margin-top: var(--spacing);
 	@include mq(medium) {
 		padding: 1rem 2rem;
