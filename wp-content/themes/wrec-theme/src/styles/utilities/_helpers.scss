@@ -26,8 +26,16 @@
 .mb-s { margin-bottom: var(--spacing-s)!important; }
 
 // WordPress specifc
-img.alignright      { float: right; margin: 0 0 var(--spacing-l) var(--spacing-l); }
-img.alignleft       { float: left; margin: 0 var(--spacing-l) var(--spacing-l) 0; }
+img.alignright	{ float: right;margin: 0 0 var(--spacing) 0; max-width: 70%;
+	@include mq(medium) {
+		margin: 0 0 var(--spacing-l) var(--spacing-l);
+	}
+}
+img.alignleft	{ float: left; margin: 0 0 var(--spacing) 0; max-width: 70%;
+	@include mq(medium) {
+		margin: 0 var(--spacing-l) var(--spacing-l) 0;
+	}
+}
 img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 .alignright         { float: right; }
 .alignleft          { float: left; }

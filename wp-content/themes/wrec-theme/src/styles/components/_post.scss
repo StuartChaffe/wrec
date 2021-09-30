@@ -1,15 +1,27 @@
 .post {
 	&-title {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: baseline;
 		justify-content: space-between;
 		@extend .container;
 		max-width: var(--container);
 		padding-top: var(--spacing);
 		padding-bottom: var(--spacing);
-
-		h1, h2, .btn {
+		h1, h2 {
 			margin: 0;
+		}
+		.btn {
+			margin-top: 1rem;
+		}
+
+		@include mq(medium) {
+			flex-direction: row;
+			align-items: center;
+
+			h1, h2, .btn {
+				margin: 0;
+			}
 		}
 	}
 }
