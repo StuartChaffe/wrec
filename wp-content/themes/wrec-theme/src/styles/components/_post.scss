@@ -1,0 +1,15 @@
+.post {
+	&-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@extend .container;
+		max-width: var(--container);
+		padding-top: var(--spacing);
+		padding-bottom: var(--spacing);
+
+		h1, h2, .btn {
+			margin: 0;
+		}
+	}
+}

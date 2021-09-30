@@ -1,0 +1,22 @@
+.banner {
+	position: relative;
+	background-color: var(--color-primary);
+	height: 100vw;
+	overflow: hidden;
+
+	@include mq(medium) {
+		height: 60vh;
+		min-height: 400px;
+		max-height: 585px;
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: none;
+		min-width: 100%;
+		min-height: calc(100% + 2px);
+	}
+}

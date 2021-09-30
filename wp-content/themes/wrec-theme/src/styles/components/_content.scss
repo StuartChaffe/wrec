@@ -1,4 +1,7 @@
 .content {
+	+ * {
+		clear: both;
+	}
 	> * {
 		max-width: var(--container);
 		margin-right: auto;

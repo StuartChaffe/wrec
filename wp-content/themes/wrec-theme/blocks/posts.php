@@ -29,7 +29,7 @@
 		?>
 		<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item" title="Permalink to <?php the_title(); ?>">
 			<div class="link-list-item--image">
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 			</div>
 			<div class="link-list-item--content">
 				<p><?php the_title(); ?></p>

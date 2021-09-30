@@ -11,13 +11,10 @@
 		justify-content: center;
 		flex: 1 0 auto;
 		width: 100%;
-		// max-width: var(--container);
+		max-width: 1200px;
 		margin: 0 auto;
 		padding: 1rem 1.3rem;
 		z-index: 9;
-		@include mq(medium) {
-			padding: 2rem 1.3rem;
-		}
 	}
 	&--logo {
 		width: 160px;
@@ -30,10 +27,13 @@
 		}
 	}
 	&--content {
-		margin-left: 2rem;
+		margin-left: 2.5rem;
+		padding-bottom: 0.5rem;
+		width: 100%;
 		p {
 			color: white;
 			margin-top: 0;
+			font-weight: var(--font-weight-light);
 		}
 	}
 	&--nav {
@@ -44,6 +44,9 @@
 		margin-top: auto;
 		@include mq(medium) {
 			display: flex;
+		}
+		.menu-primary-container {
+			width: 100%;
 		}
 		&-desktop {
 			display: none;
@@ -60,6 +63,7 @@
 		ul {
 			padding-left: 0;
 			display: flex;
+			justify-content: space-between;
 			li {
 				display: inline;
 				line-height: 100%;
@@ -76,7 +80,7 @@
 				a {
 					position: relative;
 					color: white;
-					margin: 0 1rem;
+					margin: 0 0.5rem;
 					font-weight: var(--font-weight-normal);
 					text-decoration: none;
 					transition: color .2s ease-in-out;

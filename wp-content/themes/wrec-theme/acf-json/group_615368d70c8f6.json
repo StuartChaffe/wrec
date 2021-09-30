@@ -67,12 +67,13 @@
                 "id": ""
             },
             "choices": {
+                "None": "None",
                 "theme--pink": "Pink",
                 "theme--blue": "Blue",
                 "theme--green": "Green",
                 "theme--white": "White"
             },
-            "default_value": false,
+            "default_value": "None",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -98,5 +99,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632856709
+    "modified": 1633001755
 }

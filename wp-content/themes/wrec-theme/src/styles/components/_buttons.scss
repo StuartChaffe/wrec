@@ -14,7 +14,7 @@
 	transition: transform 0.1s ease-in-out;
 	margin-top: var(--spacing);
 	@include mq(medium) {
-		padding: 1rem 2rem;
+		padding: 0.8rem 2rem;
 	}
 
 	&:hover, &:focus {

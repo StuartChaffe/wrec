@@ -2,6 +2,22 @@
 	padding: var(--spacing);
 	text-align: center;
 	@include mq(medium) {
-		padding: var(--spacing-xl) var(--spacing-xxl);
+		padding: var(--spacing) var(--spacing-xxl);
+	}
+
+	&--buttons {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: var(--spacing);
+		.btn {
+			margin-top: 0 !important;
+			&:first-child {
+				margin-right: var(--spacing-l);
+			}
+			&:last-child {
+				margin-left: var(--spacing-l);
+			}
+		}
 	}
 }

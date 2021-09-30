@@ -137,6 +137,22 @@ function wrec_acf_blocks() {
 				),
 			),
 		));
+		acf_register_block(array(
+			'name'				=> 'content',
+			'title'				=> __('Content block'),
+			'description'		=> __('Add a content block'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'format-aside',
+			'align' 			=> 'wide',
+			'mode' => 'auto',
+			'keywords'			=> array( 'content' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'auto',
+				),
+			),
+		));
 		// acf_register_block(array(
 		// 	'name'				=> 'accordion',
 		// 	'title'				=> __('Accordion'),
@@ -182,17 +198,7 @@ function wrec_acf_blocks() {
 		// 		),
 		// 	),
 		// ));
-		// acf_register_block(array(
-		// 	'name'				=> 'content',
-		// 	'title'				=> __('Content block'),
-		// 	'description'		=> __('Add a content block'),
-		// 	'render_callback'	=> 'wrec_acf_block_render_callback',
-		// 	'category'			=> 'wrec-blocks',
-		// 	'icon'				=> 'format-aside',
-		// 	'align' 			=> 'full',
-		// 	'mode' => 'auto',
-		// 	'keywords'			=> array( 'content, journal' ),
-		// ));
+
 		// acf_register_block(array(
 		// 	'name'				=> 'cta',
 		// 	'title'				=> __('Call to action'),
@@ -548,15 +554,17 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/columns',
 		'acf/testimonial',
 		'acf/cta',
+		'acf/content',
 		'acf/text-image',
 		'acf/title-block',
 		'acf/posts',
 		'acf/careers',
 		'acf/courses',
+		// 'core/paragraph',
+		// 'core/image',
 		// 'acf/accordion',
 		// 'acf/banner',
 		// 'acf/carousel',
-		// 'acf/content',
 		// 'acf/featured-space',
 		// 'acf/featured-journal',
 		// 'acf/intro-block',
@@ -575,11 +583,6 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 	);
  
 }
-
-
- // add default image setting to ACF image fields
-  // let's you select a default image
-  // this is simply taking advantage of a field setting that already exists
   
 add_action('acf/render_field_settings/type=image', 'add_default_value_to_image_field');
 function add_default_value_to_image_field($field) {

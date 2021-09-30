@@ -397,14 +397,14 @@ input[type=button]:focus {
   min-height: 100%;
 }
 
-.container, .global-footer__inner, .main {
+.container, .post-title, .global-footer__inner, .main {
   margin: 0 auto;
   padding: 0 1.75rem;
   width: 100%;
-  max-width: var(--container-width);
+  max-width: var(--container);
 }
 @media (min-width: 50em) {
-  .container, .global-footer__inner, .main {
+  .container, .post-title, .global-footer__inner, .main {
     padding: 0 1rem;
   }
 }
@@ -412,6 +412,9 @@ input[type=button]:focus {
 .main {
   max-width: var(--container);
   flex: 1;
+}
+.main + * {
+  clear: both;
 }
 
 .theme--pink {
@@ -427,6 +430,9 @@ input[type=button]:focus {
   background-color: white;
 }
 
+.content + * {
+  clear: both;
+}
 .content > * {
   max-width: var(--container);
   margin-right: auto;
@@ -548,7 +554,7 @@ input[type=button]:focus {
 }
 @media (min-width: 50em) {
   .btn {
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
   }
 }
 .btn:hover, .btn:focus {
@@ -618,14 +624,10 @@ input[type=button]:focus {
   justify-content: center;
   flex: 1 0 auto;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 1.3rem;
   z-index: 9;
-}
-@media (min-width: 50em) {
-  .global-header--inner {
-    padding: 2rem 1.3rem;
-  }
 }
 .global-header--logo {
   width: 160px;
@@ -640,11 +642,14 @@ input[type=button]:focus {
   display: block;
 }
 .global-header--content {
-  margin-left: 2rem;
+  margin-left: 2.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
 }
 .global-header--content p {
   color: white;
   margin-top: 0;
+  font-weight: var(--font-weight-light);
 }
 .global-header--nav {
   align-items: center;
@@ -657,6 +662,9 @@ input[type=button]:focus {
   .global-header--nav {
     display: flex;
   }
+}
+.global-header--nav .menu-primary-container {
+  width: 100%;
 }
 .global-header--nav-desktop {
   display: none;
@@ -677,6 +685,7 @@ input[type=button]:focus {
 .global-header--nav ul {
   padding-left: 0;
   display: flex;
+  justify-content: space-between;
 }
 .global-header--nav ul li {
   display: inline;
@@ -691,7 +700,7 @@ input[type=button]:focus {
 .global-header--nav ul li a {
   position: relative;
   color: white;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   font-weight: var(--font-weight-normal);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
@@ -933,6 +942,29 @@ body.nav-open {
   color: white;
 }
 
+.banner {
+  position: relative;
+  background-color: var(--color-primary);
+  height: 100vw;
+  overflow: hidden;
+}
+@media (min-width: 50em) {
+  .banner {
+    height: 60vh;
+    min-height: 400px;
+    max-height: 585px;
+  }
+}
+.banner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: none;
+  min-width: 100%;
+  min-height: calc(100% + 2px);
+}
+
 .columns {
   display: flex;
   flex-direction: column;
@@ -970,8 +1002,23 @@ body.nav-open {
 }
 @media (min-width: 50em) {
   .cta {
-    padding: var(--spacing-xl) var(--spacing-xxl);
+    padding: var(--spacing) var(--spacing-xxl);
   }
+}
+.cta--buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing);
+}
+.cta--buttons .btn {
+  margin-top: 0 !important;
+}
+.cta--buttons .btn:first-child {
+  margin-right: var(--spacing-l);
+}
+.cta--buttons .btn:last-child {
+  margin-left: var(--spacing-l);
 }
 
 .text-image {
@@ -1096,6 +1143,18 @@ body.nav-open {
   padding: var(--spacing);
 }
 
+.post-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+.post-title h1, .post-title h2, .post-title .btn {
+  margin: 0;
+}
+
 .u-bold {
   font-weight: bold !important;
 }
@@ -1174,12 +1233,12 @@ body.nav-open {
 
 img.alignright {
   float: right;
-  margin: 0 0 1em 1em;
+  margin: 0 0 var(--spacing-l) var(--spacing-l);
 }
 
 img.alignleft {
   float: left;
-  margin: 0 1em 1em 0;
+  margin: 0 var(--spacing-l) var(--spacing-l) 0;
 }
 
 img.aligncenter {
@@ -1211,6 +1270,18 @@ img.aligncenter {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+@media (max-width: 49.99em) {
+  .hidemobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 50em) {
+  .hidedesktop {
+    display: none !important;
+  }
 }
 
 @media print {

@@ -26,8 +26,8 @@
 .mb-s { margin-bottom: var(--spacing-s)!important; }
 
 // WordPress specifc
-img.alignright      { float: right; margin: 0 0 1em 1em; }
-img.alignleft       { float: left; margin: 0 1em 1em 0; }
+img.alignright      { float: right; margin: 0 0 var(--spacing-l) var(--spacing-l); }
+img.alignleft       { float: left; margin: 0 var(--spacing-l) var(--spacing-l) 0; }
 img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 .alignright         { float: right; }
 .alignleft          { float: left; }
@@ -43,6 +43,19 @@ img.aligncenter     { display: block; margin-left: auto; margin-right: auto; }
 	overflow: hidden;
 	clip: rect(0,0,0,0);
 	border: 0;
+}
+
+// Show and hide
+.hidemobile {
+	@include mq($until: medium) {
+		display: none !important;
+	}
+}
+
+.hidedesktop {
+	@include mq(medium) {
+		display: none !important;
+	}
 }
 
 // debugging
