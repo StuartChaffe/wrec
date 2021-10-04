@@ -47,5 +47,3 @@ function is_tree($pid){
 function get_icon($icon) {
 	return '<svg class="icon icon-' . $icon . '"><use xlink:href="#' . $icon . '"></use></svg>';
 }
-
-

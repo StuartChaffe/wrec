@@ -22,8 +22,8 @@
 		<div class="cta">
 			<p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet </p>
 			<div class="cta--buttons">
-				<!-- <a class="btn" href="">Apply Now</a> or <a class="btn" href="/contact">Contact Us</a> -->
-				<a class="btn" href="">Apply Now</a>
+				<a class="btn" href="">Apply Now</a> or <a class="btn" href="/contact">Contact Us</a>
+				<!-- <a class="btn" href="">Apply Now</a> -->
 			</div>
 		</div>
 
