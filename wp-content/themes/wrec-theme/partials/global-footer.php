@@ -1,5 +1,9 @@
 <footer class="global-footer">
 	<div class="global-footer__inner">
+
+
+
+	
 		<p>&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
 		<ul class="social-links">
