@@ -216,7 +216,7 @@ h5, .heading-5 {
   line-height: var(--line-height-headings);
   font-weight: var(--font-weight-bold);
   color: var(--heading-color);
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--spacing-l);
 }
 
 h1, .heading-1 {
@@ -415,6 +415,14 @@ input[type=button]:focus {
 }
 .main + * {
   clear: both;
+}
+.main section {
+  margin-bottom: var(--spacing);
+}
+@media (min-width: 50em) {
+  .main section {
+    margin-bottom: var(--spacing-xl);
+  }
 }
 
 .theme--pink {
@@ -987,6 +995,9 @@ body.nav-open {
     padding: var(--spacing-xl) var(--spacing-xxl);
   }
 }
+.columns-item h1, .columns-item h2, .columns-item h3, .columns-item .heading-1, .columns-item .heading-2, .columns-item .heading-3, .columns-item .testimonial .lead, .testimonial .columns-item .lead {
+  margin-bottom: var(--spacing);
+}
 
 .testimonial {
   padding: var(--spacing);
@@ -1085,11 +1096,11 @@ body.nav-open {
 }
 
 .title-block {
-  padding: var(--spacing) 0;
+  padding-top: var(--spacing);
 }
 @media (min-width: 50em) {
   .title-block {
-    padding: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+    padding-top: var(--spacing-xxl);
   }
 }
 

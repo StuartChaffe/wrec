@@ -93,6 +93,21 @@ function wrec_acf_blocks() {
 			),
 		));
 		acf_register_block(array(
+			'name'				=> 'page-title',
+			'title'				=> __('Page title'),
+			'description'		=> __('Add a page title'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'minus',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'title, page' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
 			'name'				=> 'posts',
 			'title'				=> __('All posts'),
 			'description'		=> __('Add all posts'),
@@ -557,29 +572,10 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/content',
 		'acf/text-image',
 		'acf/title-block',
+		'acf/page-title',
 		'acf/posts',
-		'acf/careers',
 		'acf/courses',
-		// 'core/paragraph',
-		// 'core/image',
-		// 'acf/accordion',
-		// 'acf/banner',
-		// 'acf/carousel',
-		// 'acf/featured-space',
-		// 'acf/featured-journal',
-		// 'acf/intro-block',
-		// 'acf/image',
-		// 'acf/image-block',
-		// 'acf/image-slider',
-		// 'acf/journals',
-		// 'acf/logos',
-		// 'acf/location-images',
-		// 'acf/manifesto',
-		// 'acf/membership',
-		// 'acf/text-block',
-		// 'acf/space-cta',
-		// 'acf/spaces',
-		// 'acf/space-description'
+		// 'acf/careers',
 	);
  
 }

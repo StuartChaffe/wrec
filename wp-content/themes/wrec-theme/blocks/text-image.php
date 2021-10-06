@@ -6,6 +6,7 @@ $title = get_field('text_image_title');
 $content = get_field('text_image_content');
 ?>
 
+<section>
 <?php if ($title) { ?><h2><?php echo $title; ?></h2><?php } ?>
 <div class="text-image">
 	<div class="text-image--content<?php if ( $content['image_position']  == 'text-image--image__left' ) { ?> text-image--content__right<?php } ?>">
@@ -15,3 +16,4 @@ $content = get_field('text_image_content');
 		<img loading="lazy" src="<?php echo $content['image']['url']; ?>" alt="<?php echo $content['image']['alt']; ?>" />
 	</div>
 </div>
+</section>

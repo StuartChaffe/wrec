@@ -1,6 +1,6 @@
 .title-block {
-	padding: var(--spacing) 0;
+	padding-top: var(--spacing);
 	@include mq(medium) {
-		padding: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+		padding-top: var(--spacing-xxl);
 	}
 }

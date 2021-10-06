@@ -25,6 +25,12 @@
 	+ * {
 		clear: both;
 	}
+	section {
+		margin-bottom: var(--spacing);
+		@include mq(medium) {
+			margin-bottom: var(--spacing-xl);
+		}
+	}
 }
 
 .theme {
