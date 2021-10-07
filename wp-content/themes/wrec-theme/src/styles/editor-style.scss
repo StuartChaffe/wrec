@@ -13,11 +13,16 @@
 @import "components/*.scss";
 
 .wp-block {
-    max-width: var(--container);
-    margin-left: auto !important;
-    margin-right: auto !important;
+	max-width: var(--container);
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .block-list-appender>.block-editor-inserter {
-    clear: both;
+	clear: both;
+}
+
+/* Stop links being clickable in the block editor */
+.acf-block-preview a {
+	pointer-events: none!important;
 }

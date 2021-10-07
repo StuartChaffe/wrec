@@ -4,18 +4,23 @@
  * Enable ACF options page
  */
 add_action('acf/init', function () {
-    if( function_exists('acf_add_options_page') ) {
-        $parent = acf_add_options_page(array(
-            'page_title'  => __('Theme Options'),
-            'menu_title'  => __('Theme Options'),
-            'redirect'    => false,
-        ));
-        $child = acf_add_options_page(array(
-            'page_title'  => __('Social Settings'),
-            'menu_title'  => __('Social'),
-            'parent_slug' => $parent['menu_slug'],
-        ));
-    }
+	if( function_exists('acf_add_options_page') ) {
+		$parent = acf_add_options_page(array(
+			'page_title'  => __('Theme Options'),
+			'menu_title'  => __('Theme Options'),
+			'redirect'    => false,
+		));
+		$child = acf_add_options_page(array(
+			'page_title'  => __('Social Settings'),
+			'menu_title'  => __('Social'),
+			'parent_slug' => $parent['menu_slug'],
+		));
+		$child = acf_add_options_page(array(
+			'page_title'  => __('Locations'),
+			'menu_title'  => __('Locations'),
+			'parent_slug' => $parent['menu_slug'],
+		));
+	}
 });
 
 

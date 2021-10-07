@@ -50,14 +50,21 @@ a:hover {
 
 h1, .heading-1,
 h2, .heading-2,
-h3, .heading-3,
+h3, .heading-3 {
+	margin: 0;
+	line-height: var(--line-height-headings);
+	font-weight: var(--font-weight-bold);
+	color: var(--heading-color);
+	margin-bottom: var(--spacing-l);
+}
+
 h4, .heading-4,
 h5, .heading-5 {
 	margin: 0;
 	line-height: var(--line-height-headings);
 	font-weight: var(--font-weight-bold);
 	color: var(--heading-color);
-	margin-bottom: var(--spacing-l);
+	margin-bottom: var(--spacing);
 }
 
 h1, .heading-1 { font-size: var(--font-size-h1); }

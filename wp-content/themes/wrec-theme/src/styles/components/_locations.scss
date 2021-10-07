@@ -1,0 +1,16 @@
+.locations {
+	display: flex;
+	flex-wrap: wrap;
+	&-item {
+		width: calc(100% / 3);
+		padding-right: 1rem;
+		margin-bottom: 2rem;
+		a {
+			color: var(--color-text-base);
+			&:hover {
+				color: var(--color-text-base);
+				text-decoration: underline;
+			}
+		}
+	}
+}

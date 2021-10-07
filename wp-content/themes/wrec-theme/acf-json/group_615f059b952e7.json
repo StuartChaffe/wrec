@@ -1,0 +1,70 @@
+{
+    "key": "group_615f059b952e7",
+    "title": "Form",
+    "fields": [
+        {
+            "key": "field_615f059f1c1f0",
+            "label": "Form",
+            "name": "form",
+            "type": "text",
+            "instructions": "Enter the shortcode from the Contact Form plugin.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_615f05dc3e184",
+            "label": "Background colour",
+            "name": "bkg",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "theme--pink": "Pink",
+                "theme--blue": "Blue",
+                "theme--green": "Green",
+                "theme--white": "White"
+            },
+            "default_value": "theme--blue",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/form"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1633617419
+}

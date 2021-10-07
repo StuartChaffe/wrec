@@ -1,12 +1,44 @@
 .social-links {
 	display: flex;
-	justify-content: center;
 }
 
 .social-links__item {
-	margin: 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0.3rem;
+	margin-bottom: 1rem;
+	width: 48px;
+	height: 48px;
+	border: 2px solid white;
+	border-radius: 70px;
+	transition: transform 0.1s ease-in-out;
+	@include mq(large) {
+		margin: 0 0.5rem;
+		margin-bottom: 1rem;
+		width: 68px;
+		height: 68px;
+	}
+	&:first-child {
+		margin-left: 0;
+	}
+	&:hover {
+		transform: scale(1.1, 1.1);
+	}
 }
 
 .social-links__link {
+    display: flex;
 	color: white;
+	.icon {
+		width: 30px;
+    	height: 20px;
+		@include mq(large) {
+			width: 42px;
+    		height: 32px;
+		}
+		&-facebook {
+			height: 50px;
+		}
+	}
 }

@@ -5,6 +5,13 @@
 	h2, h3, h4, h5, h6, p {
 		color: white;
 		margin-bottom: 1rem;
+		font-weight: var(--font-weight-normal);
+	}
+	a {
+		&:hover {
+			color: white;
+			text-decoration: underline;
+		}
 	}
 	&--logo {
 		width: 160px;
@@ -18,32 +25,79 @@
 	}
 	&--content {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 		justify-content: space-between;
+		margin-top: var(--spacing);
+		@include mq(medium) {
+			flex-direction: row;
+		}
 	}
 	&--contacts {
-		width: 50%;
+		width: 100%;
+		margin-bottom: var(--spacing);
+		@include mq(medium) {
+			width: 65%;
+			margin-bottom: 0;
+			padding-right: 1rem;
+		}
 		&-list {
 			display: flex;
 			flex-wrap: wrap;
 			&-item {
 				width: 50%;
 				margin-bottom: 1rem;
+				p {
+					font-weight: var(--font-weight-light);
+				}
 			}
 		}
 	}
 	&--links {
 		display: flex;
-		width: 50%;
+		width: 100%;
+		justify-content: space-between;
+		@include mq(medium) {
+			width: 50%;
+			padding-left: 1rem;
+		}
 		&-social {
 			width: 50%;
+			padding-right: 1rem;
+			@include mq(medium) {
+				width: auto;
+				padding-left: 0;
+				padding-left: 1rem;
+			}
 		}
 		&-web {
 			width: 50%;
+			@include mq(medium) {
+				width: auto;
+			}
+		}
+	}
+
+	&--nav {
+		ul {
+			li {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1rem;
+				a {
+					font-size: var(--font-size-small);
+					color: white;
+					font-weight: var(--font-weight-light);
+				}
+			}
 		}
 	}
 	&--copy {
+		margin: var(--spacing-l) 0 var(--spacing) 0;
 		text-align: center;
+		p {
+			font-weight: var(--font-weight-light);
+		}
 	}
 }
 
