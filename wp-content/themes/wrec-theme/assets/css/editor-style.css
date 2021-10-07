@@ -478,14 +478,58 @@ pre {
 
 .global-footer {
   margin-top: auto;
-  text-align: center;
   background-color: var(--color-grey-dark);
+  color: white;
+}
+.global-footer h2, .global-footer h3, .global-footer h4, .global-footer h5, .global-footer h6, .global-footer p {
+  color: white;
+  margin-bottom: 1rem;
+}
+.global-footer--logo {
+  width: 160px;
+  z-index: 1;
+}
+@media (min-width: 50em) {
+  .global-footer--logo {
+    width: 212px;
+  }
+}
+.global-footer--logo a {
+  display: block;
+}
+.global-footer--content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.global-footer--contacts {
+  width: 50%;
+}
+.global-footer--contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.global-footer--contacts-list-item {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.global-footer--links {
+  display: flex;
+  width: 50%;
+}
+.global-footer--links-social {
+  width: 50%;
+}
+.global-footer--links-web {
+  width: 50%;
+}
+.global-footer--copy {
+  text-align: center;
 }
 
 .global-footer__inner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   max-width: var(--container);
   padding: var(--spacing) 1.3rem;
 }

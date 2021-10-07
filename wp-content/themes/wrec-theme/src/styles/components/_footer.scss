@@ -1,14 +1,56 @@
 .global-footer {
 	margin-top: auto;
-	text-align: center;
 	background-color: var(--color-grey-dark);
+	color: white;
+	h2, h3, h4, h5, h6, p {
+		color: white;
+		margin-bottom: 1rem;
+	}
+	&--logo {
+		width: 160px;
+		z-index: 1;
+		@include mq(medium) {
+			width: 212px;
+		}
+		a {
+			display: block;
+		}
+	}
+	&--content {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+	&--contacts {
+		width: 50%;
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			&-item {
+				width: 50%;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+	&--links {
+		display: flex;
+		width: 50%;
+		&-social {
+			width: 50%;
+		}
+		&-web {
+			width: 50%;
+		}
+	}
+	&--copy {
+		text-align: center;
+	}
 }
 
 .global-footer__inner {
 	@extend .container;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: column;
 	max-width: var(--container);
 	padding: var(--spacing) 1.3rem;
 }
