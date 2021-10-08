@@ -15,8 +15,7 @@ $bkg = get_field('bkg');
 			$title = get_the_title($featuredpost);
 			$desc = get_field( 'event_desc', $featuredpost);
 			// $image = get_field( 'event_image', $featuredpost);
-			$images = get_field('images', get_the_ID());
-			$image = get_field('square_image', get_the_ID());
+			$image = get_field('square_image', $featuredpost);
 		?>
 
 		<a href="<?php the_permalink($featuredpost); ?>" class="link-list-item" title="Permalink to <?php echo $title; ?>">
