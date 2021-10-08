@@ -1,10 +1,18 @@
+<?php
+	$contacttitle = get_field( 'footer_contact_title', 'options');
+	$socialtitle = get_field( 'footer_social_title', 'options');
+	$policy = get_field( 'footer_social_content', 'options');
+	$menutitle = get_field( 'footer_menu_title', 'options');
+	$copyright = get_field( 'copyright', 'options');
+?>
+
 <footer class="global-footer">
 	<div class="global-footer__inner">
 		<div class="global-footer--logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.svg" alt="Whitehead Ross Logo" /></a></div>
 
 		<div class="global-footer--content">
 			<div class="global-footer--contacts">
-				<h5>Contact Us</h5>
+				<h5><?php echo $contacttitle ?></h5>
 				<div class="global-footer--contacts-list">
 				<?php if( have_rows('location', 'options') ): ?>
 					<?php while( have_rows('location', 'options') ): the_row();
@@ -22,7 +30,7 @@
 			</div>
 			<div class="global-footer--links">
 				<div class="global-footer--links-social">
-					<h5>Follow us on...</h5>
+					<h5><?php echo $socialtitle ?></h5>
 					<ul class="social-links">
 					<?php if(get_field('facebook', 'options')): ?>
 						<li class="social-links__item"><a href="<?php the_field('facebook', 'options'); ?>" class="social-links__link"><?php echo get_icon('facebook'); ?></a></li>
@@ -41,17 +49,17 @@
 					<?php endif; ?>
 					
 					</ul>
-					<a href=""><h5>Our Policies</h5></a>
+					<?php echo $policy ?>
 				</div>
 				<div class="global-footer--links-web">
-					<h5>Website Pages<h5>
+					<h5><?php echo $menutitle ?><h5>
 					<nav class="global-footer--nav"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>	
 				</div>
 			</div>
 		</div>
 
 		<div class="global-footer--copy">
-			<p>Copyright &copy; <?php echo date('Y'); ?> Whitehead Ross Education and Consulting.</p>
+			<p>Copyright &copy; <?php echo date('Y'); ?> <?php echo $copyright ?></p>
 		</div>
 	</div>
 </footer>

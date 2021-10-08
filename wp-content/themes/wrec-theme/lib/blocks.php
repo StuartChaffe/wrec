@@ -198,6 +198,51 @@ function wrec_acf_blocks() {
 				),
 			),
 		));
+		acf_register_block(array(
+			'name'				=> 'logos',
+			'title'				=> __('Logos'),
+			'description'		=> __('Add a logos block'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'screenoptions',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'logo, award' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'image',
+			'title'				=> __('Image'),
+			'description'		=> __('Add an image block'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'heart',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'image' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+		acf_register_block(array(
+			'name'				=> 'featured-posts',
+			'title'				=> __('Featured posts'),
+			'description'		=> __('Add featured posts'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'screenoptions',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'posts, featured' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
 	}
 }
 
@@ -225,6 +270,9 @@ function wrec_allowed_block_types( $allowed_blocks ) {
 		'acf/courses',
 		'acf/locations',
 		'acf/form',
+		'acf/logos',
+		'acf/image',
+		'acf/featured-posts',
 		// 'acf/careers',
 	);
  

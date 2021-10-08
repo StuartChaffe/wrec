@@ -1,0 +1,32 @@
+.logos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 -3rem;
+
+	&--two {
+		.logos-item {
+			width: calc(100% / 2);
+		}
+	}
+	&--three {
+		.logos-item {
+			width: calc(100% / 3);
+		}
+	}
+	&--four {
+		.logos-item {
+			width: calc(100% / 4);
+		}
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 3rem 2rem 3rem;
+
+		img {
+			width: 100%;
+		}
+	}
+}

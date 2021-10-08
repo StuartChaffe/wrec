@@ -8,6 +8,7 @@
 		font-weight: var(--font-weight-normal);
 	}
 	a {
+		color: white;
 		&:hover {
 			color: white;
 			text-decoration: underline;
@@ -47,6 +48,7 @@
 			&-item {
 				width: 50%;
 				margin-bottom: 1rem;
+				line-height: 1.2;
 				p {
 					font-weight: var(--font-weight-light);
 				}

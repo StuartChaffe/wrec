@@ -2,7 +2,7 @@
 	--body-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--display-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-	--font-size: calc(1.05rem + 0.15vw);
+	--font-size: calc(1.08rem + 0.15vw);
 	--font-size-lead: calc(1.4rem + 0.1vw);
 	--font-size-small: calc(0.9rem + 0.1vw);
 
@@ -19,10 +19,10 @@
 	--color-grey: #ddd;
 	--color-grey-light: #efefef;
 
-	--color-primary: #ffb8ef;
-	--color-secondary: #00d5e1;
-	--color-tertiary: #9cffae;
-	--color-quaternary: #f3edf2;
+	--color-primary: #F9BFEC;
+	--color-secondary: #4CD0DE;
+	--color-tertiary: #B0FBB5;
+	--color-quaternary: #F2EDF1;
 
 	--color-text-base: var(--color-grey-dark);
 	--color-text-dark: #000;
@@ -50,7 +50,7 @@
 
 	--content-width: 768px;
 	--container-small: 768px;
-	--container: 1320px;
+	--container: 1360px;
 	--container-large: 1600px;
 
 	--font-size-h1: calc(3.2rem + 0.2vw);
@@ -60,7 +60,7 @@
 	--font-size-h5: calc(1.2rem + 0.2vw);
 
 	@include mq(large) {
-		--font-size-h1: calc(3.2rem + 0.2vw);
+		--font-size-h1: calc(3rem + 0.2vw);
 		--font-size-h2: calc(3rem + 0.2vw);
 		--font-size-h3: calc(2.4rem + 0.2vw);
 		--font-size-h4: calc(1.4rem + 0.2vw);

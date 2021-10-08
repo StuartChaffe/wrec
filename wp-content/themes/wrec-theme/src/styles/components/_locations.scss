@@ -2,9 +2,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	&-item {
-		width: calc(100% / 3);
+		width: calc(100% / 2);
 		padding-right: 1rem;
 		margin-bottom: 2rem;
+		@include mq(medium) {
+			width: calc(100% / 3);
+		}
 		a {
 			color: var(--color-text-base);
 			&:hover {

@@ -7,10 +7,12 @@
 // Base
 @import "base/base";
 @import "base/typography";
+@import "base/forms";
 
 // Components
 
 @import "components/*.scss";
+@import "components/logos.scss";
 
 .wp-block {
 	max-width: var(--container);

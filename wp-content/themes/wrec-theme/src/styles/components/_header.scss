@@ -13,14 +13,14 @@
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 1rem 1.3rem;
+		padding: 0.9rem 1.3rem;
 		z-index: 9;
 	}
 	&--logo {
 		width: 160px;
 		z-index: 1;
 		@include mq(medium) {
-			width: 212px;
+			width: 282px;
 		}
 		a {
 			display: block;
@@ -29,6 +29,7 @@
 	&--content {
 		margin-left: 2.5rem;
 		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
 		width: 100%;
 		p {
 			color: white;
@@ -39,11 +40,14 @@
 	&--nav {
 		align-items: center;
 		height: 100%;
+		padding: 0 1.5rem;
 		margin-left: auto;
-		margin-right: 1rem;
 		margin-top: auto;
+		padding-bottom: 1.3rem;
 		@include mq(medium) {
 			display: flex;
+			padding: 0;
+			margin-right: 1rem;
 		}
 		.menu-primary-container {
 			width: 100%;
@@ -83,9 +87,11 @@
 					margin: 0 0.5rem;
 					font-weight: var(--font-weight-normal);
 					text-decoration: none;
+					font-size: 15px;
 					transition: color .2s ease-in-out;
 					@include mq(medium) {
 						margin: 0 1.5rem;
+						font-size: var(--font-size);
 					}
 					@include mq(large) {
 						margin: 0 2rem;
