@@ -8,12 +8,17 @@
 	<section class="banner">
 		<img loading="lazy" class="hidemobile" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 		<img loading="lazy" class="hidedesktop" src="<?php echo $imagesquare['url']; ?>" alt="<?php echo $imagesquare['alt']; ?>" />
+		<a href="/contact" class="btn btn--primary hidedesktop">Apply Now</a>
 	</section>
 <?php } ?>
 	<section class="theme--pink">
 		<div class="post-title">
 			<h1><?php the_title(); ?></h1>
-			<a href="" class="btn">Apply Now</a>
+		<?php if ($image) { ?>
+			<a href="/contact" class="btn hidemobile">Apply Now</a>
+		<?php } else { ?>
+			<a href="/contact" class="btn">Apply Now</a>
+		<?php } ?>
 		</div>
 	</section>
 	<main class="main">
@@ -22,7 +27,7 @@
 		<div class="cta">
 			<p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet </p>
 			<div class="cta--buttons">
-				<a class="btn" href="">Apply Now</a> or <a class="btn" href="/contact">Contact Us</a>
+				<a class="btn" href="/contact">Apply Now</a> or <a class="btn" href="/contact">Contact Us</a>
 				<!-- <a class="btn" href="">Apply Now</a> -->
 			</div>
 		</div>

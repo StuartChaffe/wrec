@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	padding: var(--spacing);
+	padding: var(--spacing-m);
 	@include mq(medium) {
 		padding: var(--spacing-l);
 	}
@@ -37,8 +37,6 @@
 				margin-right: 0;
 			}
 		}
-	
-
 		&:hover {
 			color: white;
 			text-decoration: none;
@@ -49,7 +47,7 @@
 			position: relative;
 			overflow: hidden;
 			width: 100%;
-			height: calc(100vw - 122px); 
+			height: calc(100vw - 143px); 
 			@include mq(medium) {
 				height: calc(33vw - 60px); 
 				max-height: 350px;

@@ -10,6 +10,9 @@
 		padding-bottom: var(--spacing);
 		h1, h2 {
 			margin: 0;
+			@include mq(medium) {
+				max-width: 75%;
+			}
 		}
 		.btn {
 			margin-top: 1rem;
@@ -29,6 +32,7 @@
 		margin-top: 2rem;
 		p {
 			margin-right: 1rem;
+			margin-bottom: 0;
 		}
 	}
 }

@@ -1,5 +1,5 @@
 .cta {
-	padding: var(--spacing);
+	padding: var(--spacing) 0;
 	text-align: center;
 	@include mq(medium) {
 		padding: var(--spacing) var(--spacing-xxl);
@@ -13,11 +13,27 @@
 		.btn {
 			margin-top: 0 !important;
 			&:first-child {
-				margin-right: var(--spacing-l);
+				margin-right: var(--spacing-s);
+				@include mq(medium) {
+					margin-right: var(--spacing-l);
+				}
 			}
 			&:last-child {
-				margin-left: var(--spacing-l);
+				margin-left: var(--spacing-s);
+				@include mq(medium) {
+					margin-left: var(--spacing-l);
+				}
 			}
 		}
+	}
+}
+
+.cta.theme--blue,
+.cta.theme--green,
+.cta.theme--pink {
+	padding: var(--spacing);
+	text-align: center;
+	@include mq(medium) {
+		padding: var(--spacing) var(--spacing-xxl);
 	}
 }

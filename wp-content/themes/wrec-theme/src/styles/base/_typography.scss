@@ -55,7 +55,10 @@ h3, .heading-3 {
 	line-height: var(--line-height-headings);
 	font-weight: var(--font-weight-bold);
 	color: var(--heading-color);
-	margin-bottom: var(--spacing-l);
+	margin-bottom: var(--spacing);
+	@include mq(medium) {
+		margin-bottom: var(--spacing-l);
+	}
 }
 
 h4, .heading-4,

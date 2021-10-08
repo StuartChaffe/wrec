@@ -5,8 +5,12 @@
 	}
 
 	.lead {
-		@extend .heading-3;
-		line-height: 1.5;
+		font-size: var(--font-size-h4);
+		line-height: 1.25;
 		margin-bottom: var(--spacing-s);
+		@include mq(medium) {
+			font-size: var(--font-size-h3);
+			line-height: 1.5;
+		}
 	}
 }
