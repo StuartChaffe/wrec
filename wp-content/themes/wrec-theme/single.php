@@ -16,7 +16,7 @@
 		</div>
 	</section>
 	<main class="main">
-		<div class="post-meta"><p><strong>Written by: <?php echo get_the_author_meta('first_name'); ?> <?php echo get_the_author_meta('last_name'); ?></strong></p> <p><strong>Read time: 5 min</strong></p></div>
+		<div class="post-meta"><p><strong>Written by: <?php echo get_the_author_meta('first_name'); ?> <?php echo get_the_author_meta('last_name'); ?></strong></p> <p><strong><?php echo do_shortcode('[rt_reading_time label="Read time:" postfix="mins" postfix_singular="min"]'); ?></strong></p></div>
 		<?php the_content(); ?>
 		<?php
 			$the_query = new WP_Query( array(
