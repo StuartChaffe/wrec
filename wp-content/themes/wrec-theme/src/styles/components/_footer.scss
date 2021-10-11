@@ -49,6 +49,19 @@
 				width: 50%;
 				margin-bottom: 1rem;
 				line-height: 1.2;
+				word-break: break-all;
+				padding: 0 0.5rem;
+				@include mq($until: medium) {
+					&:nth-child(odd) {
+						padding-left: 0;
+					}
+					&:nth-child(even) {
+						padding-right: 0;
+					}
+				}
+				@include mq(medium) {
+					padding: 0;
+				}
 				p {
 					font-weight: var(--font-weight-light);
 				}

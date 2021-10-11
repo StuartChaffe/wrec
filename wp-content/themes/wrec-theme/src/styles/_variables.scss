@@ -54,10 +54,10 @@
 	--container: 1360px;
 	--container-large: 1600px;
 
-	--font-size-h1: calc(3.2rem + 0.2vw);
-	--font-size-h2: calc(2.8rem + 0.2vw);
-	--font-size-h3: calc(1.8rem + 0.2vw);
-	--font-size-h4: calc(1.3rem + 0.2vw);
+	--font-size-h1: calc(1.8rem + 0.2vw);
+	--font-size-h2: calc(2.6rem + 0.2vw);
+	--font-size-h3: calc(2.2rem + 0.2vw);
+	--font-size-h4: calc(1.2rem + 0.2vw);
 	--font-size-h5: calc(1.2rem + 0.2vw);
 
 	@include mq(large) {

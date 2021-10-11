@@ -76,4 +76,11 @@
 		margin-right: 0.6em;
 		color: var(--color-text-dark);
 	}
+
+	p img {
+		@include mq($until: medium) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
 }

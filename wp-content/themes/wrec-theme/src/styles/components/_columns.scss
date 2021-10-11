@@ -11,13 +11,16 @@
 	}
 	&-item {
 		text-align: center;
-		padding: var(--spacing-xl) var(--spacing-l);
+		padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-l);
 		@include mq(medium) {
 			padding: var(--spacing-xl) var(--spacing-xxl);
 		}
 
 		h1, h2, h3, .heading-1, .heading-2, .heading-3 {
-			margin-bottom: var(--spacing-l);
+			margin-bottom: var(--spacing);
+			@include mq(medium) {
+				margin-bottom: var(--spacing-l);
+			}
 		}
 	}
 }
