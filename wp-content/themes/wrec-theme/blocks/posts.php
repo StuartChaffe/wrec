@@ -7,7 +7,7 @@
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$posts = new WP_Query( array(
 		'post_type' => 'post',
-		'posts_per_page' => 10,
+		'posts_per_page' => -1,
 		'orderby' => 'date',
 		'order' => 'DESC',
 		'paged' => $paged,
@@ -17,11 +17,11 @@
 	$tmp_query = $wp_query;
 	$wp_query = null;
 	$wp_query = $posts;
-
 	$counter = 1;
 ?>
 <?php if ($posts->have_posts()) : ?>
 	<section class="posts link-list theme--blue">
+		<?php get_search_form(); ?>
 		<?php while($posts->have_posts()) : $posts->the_post(); ?>
 		<?php
 			$images = get_field('images', get_the_ID());
@@ -35,7 +35,12 @@
 				<p><?php the_title(); ?></p>
 			</div>
 		</a>
-			
 		<?php endwhile; wp_reset_query(); ?>
+		<div class="pagination">
+			<nav class="pagination-nav">
+				<?php pagination_bar(); ?>
+			</nav>
+		</div>
+		
 	</section>
 <?php endif; ?>

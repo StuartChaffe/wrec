@@ -1778,6 +1778,30 @@ body.nav-open {
   width: 100%;
 }
 
+.pagination {
+  clear: both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pagination-nav {
+  display: flex;
+  background-color: var(--color-grey-dark);
+  padding: 1rem;
+  color: white;
+}
+.pagination-nav span {
+  padding: 0 0.5rem;
+}
+.pagination-nav a {
+  color: white;
+  text-decoration: underline;
+  padding: 0 0.5rem;
+}
+.pagination-nav .prev, .pagination-nav .next {
+  padding: 0;
+}
+
 .u-bold {
   font-weight: bold !important;
 }

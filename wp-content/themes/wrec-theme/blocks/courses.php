@@ -36,5 +36,10 @@
 		</a>
 			
 		<?php endwhile; wp_reset_query(); ?>
+		<div class="pagination">
+			<nav class="pagination-nav">
+				<?php pagination_bar(); ?>
+			</nav>
+		</div>
 	</section>
 <?php endif; ?>

@@ -1,0 +1,31 @@
+.pagination {
+	clear: both;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&-nav {
+		display: flex;
+		background-color: var(--color-grey-dark);
+		padding: 1rem;
+		color: white;
+		span {
+			padding: 0 0.5rem;
+		}
+
+		a {
+			color: white;
+			text-decoration: underline;
+			padding: 0 0.5rem;
+		}
+		.prev, .next {
+			padding: 0;
+		}
+		// .prev, .next {
+		// 	color: red;
+		// 	order: 2;
+		// 	width: 50%;
+		// 	clear: both;
+		// 	display: flex;
+		// }
+	}
+}
