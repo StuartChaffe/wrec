@@ -21,6 +21,12 @@
 ?>
 <?php if ($courses->have_posts()) : ?>
 	<section class="courses link-list theme--pink">
+		<div class="post-selection">
+			<div class="post-selection--filter">
+				<button class="btn">Filter</button>
+			</div>
+			<?php get_search_form(); ?>
+		</div>
 		<?php while($courses->have_posts()) : $courses->the_post(); ?>
 		<?php
 			$images = get_field('images', get_the_ID());
