@@ -54,7 +54,7 @@ function origin_taxonomies() {
 	    'update_item'       => 'Update ' . $single_name,
 	    'add_new_item'      => 'Add New ' . $single_name,
 	    'new_item_name'     => 'New ' . $single_name . ' Name',
-	    'menu_name'         => $single_name
+	    'menu_name'         => $plural_name
 	);
 
 	$args = array(

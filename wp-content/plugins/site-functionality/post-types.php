@@ -48,6 +48,7 @@ function origin_cpts() {
 	        'not_found_in_trash'    => 'No '. $plural_name .' Found in Trash',
 	        'parent'                => 'Parent '. $single_name
 	    ),
+		'taxonomies'          => array( 'category' ),
 	);
 	register_post_type($post_type_name, $post_type_options);
 	
