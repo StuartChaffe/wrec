@@ -374,7 +374,7 @@ textarea {
   width: 100%;
   display: inline-block;
   margin-bottom: 0.7rem;
-  color: var(--color-text-base) !important;
+  color: var(--color-text-base);
 }
 input[type=email] .full-width,
 input[type=number] .full-width,
@@ -608,6 +608,58 @@ input[type=radio] {
   fill: currentColor;
   margin-top: -0.25em;
   margin-right: 0.25em;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  width: 60%;
+}
+@media (min-width: 50em) {
+  .search-form {
+    width: calc(100% / 3 - 20px);
+  }
+}
+.search-form__input {
+  position: relative;
+  background-color: var(--color-grey-dark);
+  color: white;
+}
+.search-form__submit {
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+  width: 50px;
+  height: 100%;
+  background: none;
+  border: 0;
+}
+.search-form input[type=email], .search-form input[type=number], .search-form input[type=search], .search-form input[type=text], .search-form input[type=tel], .search-form input[type=url], .search-form input[type=password], .search-form select, .search-form textarea {
+  background-color: var(--color-grey-dark);
+  font-weight: var(--font-weight-normal);
+  color: white;
+  margin-bottom: 0;
+  padding: 0.8rem 3.5rem 0.8rem 1rem;
+}
+.search-form ::-moz-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+.search-form :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+.search-form ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1;
+  /* Firefox */
 }
 
 .global-container {
@@ -1705,6 +1757,35 @@ body.nav-open {
 .post-meta p {
   margin-right: 1rem;
   margin-bottom: 0;
+}
+.post-selection {
+  display: flex;
+  width: 100%;
+}
+.post-selection--filter {
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+@media (max-width: 49.99em) {
+  .post-selection--filter {
+    width: 40%;
+  }
+}
+.post-selection--filter button {
+  margin-top: 0;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
+  padding: 0.8rem 3.5rem 0.8rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+@media (max-width: 49.99em) {
+  .post-selection--filter button {
+    padding: 0.8rem 1rem 0.8rem 1rem;
+  }
+}
+.post-selection--filter button:hover {
+  transform: none;
 }
 
 .locations {

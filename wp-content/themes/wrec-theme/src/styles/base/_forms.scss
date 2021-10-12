@@ -56,7 +56,7 @@ textarea {
 	width: 100%;
 	display: inline-block;
 	margin-bottom: 0.7rem;
-	color: var(--color-text-base) !important;
+	color: var(--color-text-base);
 
 	.full-width {
 		width: 100%;
@@ -297,4 +297,41 @@ input[type="button"] {
     fill: currentColor;
     margin-top: -0.25em;
     margin-right: 0.25em;
+}
+
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 1.5rem;
+	width: 60%;
+	@include mq(medium) {
+		width: calc(100% / 3 - 20px);
+	}
+	&__input {
+		position: relative;
+		background-color: var(--color-grey-dark);
+		color: white;
+	}
+	&__submit {
+		position: absolute;
+		top: 0;
+		right: 0.5rem;
+		width: 50px;
+		height: 100%;
+		background: none;
+		border: 0;
+	}
+	input[type=email], input[type=number], input[type=search], input[type=text], input[type=tel], input[type=url], input[type=password], select, textarea {
+		background-color: var(--color-grey-dark);
+		font-weight: var(--font-weight-normal);
+		color: white;
+		margin-bottom: 0;
+		padding: 0.8rem 3.5rem 0.8rem 1rem;
+		// width: 280px;
+	}
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: white;
+		opacity: 1; /* Firefox */
+	}
 }

@@ -21,7 +21,12 @@
 ?>
 <?php if ($posts->have_posts()) : ?>
 	<section class="posts link-list theme--blue">
-		<?php get_search_form(); ?>
+		<div class="post-selection">
+			<div class="post-selection--filter">
+				<button class="btn">Filter</button>
+			</div>
+			<?php get_search_form(); ?>
+		</div>
 		<?php while($posts->have_posts()) : $posts->the_post(); ?>
 		<?php
 			$images = get_field('images', get_the_ID());
