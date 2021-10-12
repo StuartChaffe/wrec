@@ -3,6 +3,41 @@
     "title": "Theme Settings",
     "fields": [
         {
+            "key": "field_616578fa13784",
+            "label": "Global strapline",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_616579abe0489",
+            "label": "Strapline text",
+            "name": "strapline_text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_607b050b81cae",
             "label": "Global alert",
             "name": "",
@@ -255,5 +290,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "Set theme options",
-    "modified": 1633623373
+    "modified": 1634040268
 }
