@@ -24,13 +24,12 @@
 	<main class="main">
 		<?php the_content(); ?>
 
-		<div class="cta">
+		<!-- <section class="cta">
 			<p>Lorem ipsum dolor sit amet, lorem ipsum dolor sit amet </p>
 			<div class="cta--buttons">
 				<a class="btn" href="/contact">Apply Now</a> or <a class="btn" href="/contact">Contact Us</a>
-				<!-- <a class="btn" href="">Apply Now</a> -->
 			</div>
-		</div>
+		</section> -->
 
 		<?php
 			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

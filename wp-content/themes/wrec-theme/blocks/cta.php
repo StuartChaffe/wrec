@@ -10,7 +10,13 @@ $bkg = get_field('bkg');
 	<?php if ($cta['cta_content']) { ?>
 		<?php echo $cta['cta_content']; ?>
 	<?php } ?>
-	<?php if ($cta['button']) { ?>
-		<a class="btn" href="<?php echo $cta['button']['url']; ?>"><?php echo $cta['button']['title']; ?></a>
-	<?php } ?>
+
+	<div class="cta--buttons">
+		<?php if ($cta['button']) { ?>
+			<a class="btn" href="<?php echo $cta['button']['url']; ?>"><?php echo $cta['button']['title']; ?></a>
+		<?php } ?>
+		<?php if ($cta['button_2']) { ?>
+			or <a class="btn" href="<?php echo $cta['button_2']['url']; ?>"><?php echo $cta['button_2']['title']; ?></a>
+		<?php } ?>
+	</div>
 </section>

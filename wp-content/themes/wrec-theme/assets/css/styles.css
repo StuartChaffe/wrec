@@ -1428,6 +1428,91 @@ body.nav-open {
   height: 50px;
 }
 
+.hide {
+  display: none;
+}
+
+.accordion {
+  padding: 0;
+  list-style: none;
+  margin-bottom: var(--spacing-l) !important;
+}
+.accordion > li {
+  margin-bottom: 5px;
+}
+.accordion > li button {
+  text-align: left;
+}
+.accordion__title {
+  position: relative;
+  display: flex;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 1rem 3rem 1rem 1.5rem;
+  width: 100%;
+  background-color: var(--color-secondary);
+  font-weight: var(--font-weight-bold);
+  transition: 0.3s background-color ease-in-out;
+}
+.accordion__title .icon--arrow {
+  color: var(--color-text-base);
+  position: absolute;
+  display: inline-flex;
+  right: 1rem;
+  top: 1.8rem;
+  transform: translateY(-50%);
+  transition: 0.2s all ease-in-out;
+}
+.accordion__title:hover {
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  transition: 0.3s background-color ease-in-out;
+}
+.accordion .active {
+  background-color: var(--color-secondary);
+  transition: 0.3s background-color ease-in-out;
+}
+.accordion .active .icon--arrow {
+  color: var(--color-text-base);
+  transform: translateY(-10px) rotate(90deg);
+  transition: 0.2s all ease-in-out;
+}
+.accordion .active + .accordion__content {
+  background-color: white;
+  transition: 0.3s background-color ease-in-out;
+}
+.accordion__content {
+  background-color: white;
+  transition: 0.3s background-color ease-in-out;
+  padding: 1.5rem;
+  color: var(--color-text-base);
+}
+.accordion__content ul {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+.accordion__content li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.3em;
+}
+.accordion__content li p {
+  display: inline;
+}
+.accordion__content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 0.6em;
+  color: var(--color-text-base);
+}
+
 .banner {
   position: relative;
   background-color: var(--color-primary);

@@ -243,6 +243,23 @@ function wrec_acf_blocks() {
 				),
 			),
 		));
+		acf_register_block(array(
+			'name'				=> 'accordion',
+			'title'				=> __('Accordion'),
+			'description'		=> __('Add expanding content'),
+			'render_callback'	=> 'wrec_acf_block_render_callback',
+			'category'			=> 'wrec-blocks',
+			'icon'				=> 'insert',
+			'align' 			=> 'wide',
+			'keywords'			=> array( 'accordion, expanding' ),
+			'example'			=> array(
+				'attributes' => array(
+					'mode' => 'preview',
+				),
+			),
+		));
+
+
 	}
 }
 
@@ -259,10 +276,11 @@ add_filter( 'allowed_block_types_all', 'wrec_allowed_block_types' );
 function wrec_allowed_block_types( $allowed_blocks ) {
  
 	return array(
+		'acf/content',
 		'acf/columns',
 		'acf/testimonial',
 		'acf/cta',
-		'acf/content',
+		'acf/accordion',
 		'acf/text-image',
 		'acf/title-block',
 		'acf/page-title',
