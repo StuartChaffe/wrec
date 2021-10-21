@@ -10,9 +10,11 @@
 		margin-right: auto;
 	}
 	&-item {
+		width: 100%;
 		text-align: center;
 		padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-l);
 		@include mq(medium) {
+			width: 50%;
 			padding: var(--spacing-xl) var(--spacing-xxl);
 		}
 

@@ -1555,11 +1555,13 @@ body.nav-open {
   }
 }
 .columns-item {
+  width: 100%;
   text-align: center;
   padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-l);
 }
 @media (min-width: 50em) {
   .columns-item {
+    width: 50%;
     padding: var(--spacing-xl) var(--spacing-xxl);
   }
 }
