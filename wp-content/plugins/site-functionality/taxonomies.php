@@ -36,9 +36,9 @@ function origin_taxonomies() {
 	register_taxonomy( $taxonomy_name, $post_type, $args );
 
 
-	$taxonomy_name		= "type";
+	$taxonomy_name		= "wrectype";
 	$single_name		= "Type";
-	$plural_name		= "Type";
+	$plural_name		= "Types";
 	$post_type			= array('courses', 'programmes');
 	$gutenberg_enabled	= true;
 
