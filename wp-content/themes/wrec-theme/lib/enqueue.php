@@ -10,6 +10,12 @@ function origin_scripts() {
 		wp_register_script( 'mixitup', get_template_directory_uri().'/assets/js/mixitup.min.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'mixitup' );
 
+		wp_register_script( 'mixituppagination', get_template_directory_uri().'/assets/js/mixitup-pagination.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'mixituppagination' );
+
+		wp_register_script( 'mixitupmultifilter', get_template_directory_uri().'/assets/js/mixitup-multifilter.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'mixitupmultifilter' );
+
 		wp_register_script( 'scripts', get_template_directory_uri().'/assets/js/scripts.js', array( 'jquery' ), null, true );
 		wp_enqueue_script( 'scripts' );
 	}

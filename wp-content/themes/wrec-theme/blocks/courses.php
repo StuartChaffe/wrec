@@ -14,7 +14,7 @@
 	function the_filter_items( $tax ) {
 		$terms = get_terms( $tax );
 		foreach ( $terms as $term ) {
-			echo '<button type="button" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+			echo '<button type="button" data-toggle=".' . $term->slug . '">' . $term->name . '</button>';
 		}
 	}
 
@@ -33,21 +33,20 @@
 
 <?php if ($courses->have_posts()) : ?>
 	<section class="filter courses theme--pink">
-		<?php /*
-		<div class="post-selection">
-			<div class="post-selection--filter">
-				<button class="btn">Filter</button>
-			</div>
-			<?php get_search_form(); ?>
-		</div>
-		*/ ?>
 		<div class="filter__controls">
 			<button type="button" data-filter="all">All</button>
-			<?php 
-				the_filter_items( 'category' );
-				the_filter_items( 'location' );
-				the_filter_items( 'wrectype' );
-			?>
+			<div data-filter-group>
+				<p>Categories:</p>
+				<?php the_filter_items( 'category' ); ?>
+			</div>
+			<div data-filter-group>
+				<p>Location:</p>
+				<?php the_filter_items( 'location' ); ?>
+			</div>
+			<div data-filter-group>
+				<p>Type:</p>
+				<?php the_filter_items( 'wrectype' ); ?>
+			</div>
 		</div>
 
 		<div class="filter__targets link-list">
@@ -75,12 +74,7 @@
 		
 		</div>
 
-		<?php /*
-		<div class="pagination">
-			<nav class="pagination-nav">
-				<?php pagination_bar(); ?>
-			</nav>
-		</div>
-		*/ ?>
+		<div class="mixitup-page-list"></div>
+
 	</section>
 <?php endif; ?>
