@@ -1973,9 +1973,17 @@ body.nav-open {
   border: 0;
   padding: 0.5rem 1rem;
   margin: 0 2px;
+  text-decoration: underline;
 }
-
-.mixitup-control-disabled {
+.mixitup-page-list button:hover {
+  cursor: pointer;
+  font-weight: var(--font-weight-bold);
+}
+.mixitup-page-list .mixitup-control-active {
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+.mixitup-page-list .mixitup-control-disabled {
   opacity: 0.3;
 }
 

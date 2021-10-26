@@ -41,8 +41,17 @@
 		border: 0;
 		padding: 0.5rem 1rem;
 		margin: 0 2px;
+		text-decoration: underline;
+		&:hover {
+			cursor: pointer;
+			font-weight: var(--font-weight-bold);
+		}
 	}
-}
-.mixitup-control-disabled {
-	opacity: 0.3;
+	.mixitup-control-active {
+		font-weight: var(--font-weight-bold);
+		text-decoration: none;
+	}
+	.mixitup-control-disabled {
+		opacity: 0.3;
+	}
 }
