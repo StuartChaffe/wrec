@@ -63,7 +63,7 @@
 			</div>
 				<div data-filter-group>
 					<p>Categories:</p>
-					<?php the_filter_items( 'wreccategories' ); ?>
+					<?php the_filter_items( 'category' ); ?>
 				</div>
 			</div>
 		</form>
@@ -75,7 +75,7 @@
 				<?php
 					$images = get_field('images', get_the_ID());
 					$image = get_field('square_image', get_the_ID());
-					$categories = get_filter_classes( 'wreccategories' );
+					$categories = get_filter_classes( 'category' );
 				?>
 				<div class="mix <?php echo $categories; ?> link-list-item">
 					<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item--link" title="Permalink to <?php the_title(); ?>" data-title="<?php the_title(); ?>">
