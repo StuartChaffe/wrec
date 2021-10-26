@@ -35,14 +35,16 @@
 				$images = get_field('images', get_the_ID());
 				$image = get_field('square_image', get_the_ID());
 			?>
-			<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item" title="Permalink to <?php the_title(); ?>">
-				<div class="link-list-item--image">
-					<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				</div>
-				<div class="link-list-item--content">
-					<p><?php the_title(); ?></p>
-				</div>
-			</a>
+			<div class="link-list-item">
+				<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item--link" title="Permalink to <?php the_title(); ?>">
+					<div class="link-list-item--image">
+						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+					<div class="link-list-item--content">
+						<p><?php the_title(); ?></p>
+					</div>
+				</a>
+			</div>
 			<?php endwhile; wp_reset_postdata();?>
 			<a href="/blog" class="btn">Read More</a>
 		</section>
