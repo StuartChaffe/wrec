@@ -306,7 +306,7 @@ input[type="button"] {
 	// margin-bottom: 1.5rem;
 	width: 60%;
 	@include mq(medium) {
-		width: calc(100% / 3 - 10px);
+		width: calc(100% / 3 - 15px);
 	}
 	&__input {
 		position: relative;

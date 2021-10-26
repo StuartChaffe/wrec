@@ -11,7 +11,7 @@
  */
 
 (function () {
-	const elements = document.querySelectorAll('[data-toggle]');
+	const elements = document.querySelectorAll('[data-toggler]');
 	
 	if (elements.length === 0) {
 		return false;

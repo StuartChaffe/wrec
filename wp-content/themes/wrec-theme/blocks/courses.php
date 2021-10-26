@@ -35,7 +35,7 @@
 	<section class="filter courses theme--pink">
 		<div class="post-selection">
 			<div class="post-selection--filter">
-				<button class="btn btn--filter" data-toggle="#filter__controls" >Filter</button>
+				<button class="btn btn--filter" data-toggler="#filter-controls" data-toggle-clear="true" aria-label="Toggle the filter" aria-expanded="false">Filter</button>
 			</div>
 			<div class="search-form">
 				<label for="search" class="sr-only">Search</label>
@@ -56,10 +56,7 @@
 			</svg></button>
 			</div>
 		</div>
-		<form class="filter__controls" id="filter__controls">
-			<div class="filter__controls--reset">
-				<button type="reset" data-filter="all">Show all</button>
-			</div>
+		<form class="filter__controls" id="filter-controls">
 			<div class="filter__controls--options">
 				<div data-filter-group>
 					<p>Type:</p>
@@ -73,6 +70,9 @@
 					<p>Location:</p>
 					<?php the_filter_items( 'location' ); ?>
 				</div>
+			</div>
+			<div class="filter__controls--reset">
+				<button type="reset" data-filter="all">Show all</button>
 			</div>
 			
 		</form>

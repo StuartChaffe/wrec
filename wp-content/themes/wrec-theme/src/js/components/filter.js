@@ -52,4 +52,4 @@ jQuery(function ($) {
     $(".btn--filter").click(function(){
         $(".filter__controls").toggle();
     });
- })
+})

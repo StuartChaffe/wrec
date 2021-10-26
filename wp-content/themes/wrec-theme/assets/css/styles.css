@@ -618,7 +618,7 @@ input[type=radio] {
 }
 @media (min-width: 50em) {
   .search-form {
-    width: calc(100% / 3 - 10px);
+    width: calc(100% / 3 - 15px);
   }
 }
 .search-form__input {
@@ -2042,6 +2042,10 @@ body.nav-open {
   margin-bottom: 3px;
   border: 1px solid var(--color-grey-dark);
   font-size: var(--font-size-small);
+}
+.filter__controls--reset button {
+  background: var(--color-secondary);
+  color: var(--color-text-base);
 }
 .filter__controls .mixitup-control-active {
   background: var(--color-primary);

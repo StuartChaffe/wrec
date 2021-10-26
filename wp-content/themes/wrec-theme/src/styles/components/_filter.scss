@@ -9,9 +9,6 @@
 		color: white;
 		padding: var(--spacing);
 		margin: 0 calc(var(--spacing-xl) - 10px);
-
-		&--reset {
-		}
 		&--options {
 			display: flex;
 			flex-direction: row;
@@ -48,6 +45,12 @@
 			margin-bottom: 3px;
 			border: 1px solid var(--color-grey-dark);
 			font-size: var(--font-size-small);
+		}
+		&--reset {
+			button {
+				background: var(--color-secondary);
+				color: var(--color-text-base);
+			}
 		}
 		.mixitup-control-active {
 			background: var(--color-primary);
