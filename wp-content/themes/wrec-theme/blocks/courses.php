@@ -88,15 +88,16 @@
 					$types = get_filter_classes( 'wrectype' );
 					$categories = get_filter_classes( 'wreccategories' );
 				?>
-
-				<a href="<?php esc_url( the_permalink() ); ?>" class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item" title="Permalink to <?php the_title(); ?>" data-title="<?php the_title(); ?>">
-					<div class="link-list-item--image">
-						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-					</div>
-					<div class="link-list-item--content">
-						<p><?php the_title(); ?></p>
-					</div>
-				</a>
+				<div class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item">
+					<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item--link" title="Permalink to <?php the_title(); ?>" data-title="<?php the_title(); ?>">
+						<div class="link-list-item--image">
+							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						</div>
+						<div class="link-list-item--content">
+							<p><?php the_title(); ?></p>
+						</div>
+					</a>
+				</div>
 				
 			<?php endwhile; wp_reset_query(); ?>
 		

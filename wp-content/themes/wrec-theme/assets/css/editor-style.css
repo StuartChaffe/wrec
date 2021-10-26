@@ -1598,8 +1598,6 @@ ul.menu li {
   margin-right: auto;
 }
 .link-list-item {
-  background: var(--color-grey-dark);
-  color: white;
   width: 100%;
   margin: 0 0 var(--spacing) 0;
 }
@@ -1609,10 +1607,22 @@ ul.menu li {
     margin: 10px;
   }
 }
-.link-list-item:hover {
+.link-list-item--link {
+  position: relative;
+  background: var(--color-grey-dark);
+  height: 100%;
+  color: white;
+  z-index: 1;
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.link-list-item--link:hover {
   color: white;
   text-decoration: none;
   transform: scale(1.1, 1.1);
+  z-index: 9;
 }
 .link-list-item--image {
   position: relative;
