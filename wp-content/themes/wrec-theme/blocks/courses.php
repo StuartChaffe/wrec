@@ -37,7 +37,7 @@
 			<button type="button" data-filter="all">All</button>
 			<div data-filter-group>
 				<p>Categories:</p>
-				<?php the_filter_items( 'category' ); ?>
+				<?php the_filter_items( 'wreccategories' ); ?>
 			</div>
 			<div data-filter-group>
 				<p>Location:</p>
@@ -62,7 +62,7 @@
 					$image = get_field('square_image', get_the_ID());
 					$locations = get_filter_classes( 'location' );
 					$types = get_filter_classes( 'wrectype' );
-					$categories = get_filter_classes( 'category' );
+					$categories = get_filter_classes( 'wreccategories' );
 				?>
 
 				<a href="<?php esc_url( the_permalink() ); ?>" class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item" title="Permalink to <?php the_title(); ?>" data-title="<?php the_title(); ?>">
