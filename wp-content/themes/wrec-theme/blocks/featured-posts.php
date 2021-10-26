@@ -17,15 +17,16 @@ $bkg = get_field('bkg');
 			// $image = get_field( 'event_image', $featuredpost);
 			$image = get_field('square_image', $featuredpost);
 		?>
-
-		<a href="<?php the_permalink($featuredpost); ?>" class="link-list-item" title="Permalink to <?php echo $title; ?>">
-			<div class="link-list-item--image">
-				<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			</div>
-			<div class="link-list-item--content">
-				<p><?php echo $title; ?></p>
-			</div>
-		</a>
+		<div class="link-list-item">
+			<a href="<?php the_permalink($featuredpost); ?>" class="link-list-item--link" title="Permalink to <?php echo $title; ?>">
+				<div class="link-list-item--image">
+					<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				</div>
+				<div class="link-list-item--content">
+					<p><?php echo $title; ?></p>
+				</div>
+			</a>
+		</div>
 	
 	<?php endforeach; ?>
 	<a href="/blog" class="btn">Read More</a>
