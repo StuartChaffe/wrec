@@ -23,7 +23,7 @@ var mixer = mixitup(containerEl, {
 });
 
 // Search input
-inputEl.addEventListener('keypress', (event) => {
+inputEl.addEventListener('keydown', (event) => {
 
     setTimeout(function() {
     
