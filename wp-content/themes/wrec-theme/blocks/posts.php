@@ -33,7 +33,7 @@
 
 <?php if ($posts->have_posts()) : ?>
 	<section class="filter posts theme--blue">
-	<div class="post-selection">
+		<div class="post-selection">
 			<div class="post-selection--filter">
 				<button class="btn btn--filter" data-toggler="#filter-controls" data-toggle-clear="true" aria-label="Toggle the filter" aria-expanded="false">Filter</button>
 			</div>
