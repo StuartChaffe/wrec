@@ -45,7 +45,7 @@
 					</div>
 				</a>
 			</div>
-			<?php endwhile; wp_reset_postdata();?>
+			<?php endwhile;?>
 			<a href="/blog" class="btn">Read More</a>
 		</section>
 
