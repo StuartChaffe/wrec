@@ -15,7 +15,7 @@ var mixer = mixitup(containerEl, {
         enable: true
     },
     pagination: {
-        limit: 3
+        limit: 9
     },
     load: {
         filter: initialFilter
