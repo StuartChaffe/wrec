@@ -46,3 +46,10 @@ inputEl.addEventListener('keypress', (event) => {
     }, 250);
     
 });
+
+// Show filter
+jQuery(function ($) {
+    $(".btn--filter").click(function(){
+        $(".filter__controls").toggle();
+    });
+ })

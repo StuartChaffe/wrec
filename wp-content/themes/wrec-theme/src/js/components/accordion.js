@@ -10,4 +10,4 @@ jQuery(function ($) {
         return false;
     });
     $('.accordion .accordion__content').hide();
-    })
+ })

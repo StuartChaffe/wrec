@@ -303,10 +303,10 @@ input[type="button"] {
 	position: relative;
 	display: flex;
 	align-items: flex-start;
-	margin-bottom: 1.5rem;
+	// margin-bottom: 1.5rem;
 	width: 60%;
 	@include mq(medium) {
-		width: calc(100% / 3 - 20px);
+		width: calc(100% / 3 - 10px);
 	}
 	&__input {
 		position: relative;

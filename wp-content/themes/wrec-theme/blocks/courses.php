@@ -33,25 +33,49 @@
 
 <?php if ($courses->have_posts()) : ?>
 	<section class="filter courses theme--pink">
-		<div class="filter__controls">
-			<button type="button" data-filter="all">All</button>
-			<div data-filter-group>
-				<p>Categories:</p>
-				<?php the_filter_items( 'wreccategories' ); ?>
+		<div class="post-selection">
+			<div class="post-selection--filter">
+				<button class="btn btn--filter" data-toggle="#filter__controls" >Filter</button>
 			</div>
-			<div data-filter-group>
-				<p>Location:</p>
-				<?php the_filter_items( 'location' ); ?>
-			</div>
-			<div data-filter-group>
-				<p>Type:</p>
-				<?php the_filter_items( 'wrectype' ); ?>
-			</div>
-			<div>
-				<p>Search:</p>
-				<input type="text" id="filter-input" placeholder="Type here">
+			<div class="search-form">
+				<label for="search" class="sr-only">Search</label>
+				<input type="text" name="s" id="filter-input" class="search-form__input" placeholder="Search" />
+				<button type="submit" class="search-form__submit"><span class="sr-only">Search</span><svg class="icon-search" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g id="Page-1" stroke="white" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g class="icon-search--stroke" transform="translate(-754.000000, -308.000000)" stroke-width="2">
+						<g transform="translate(232.000000, 157.000000)">
+							<g transform="translate(0.000000, 134.000000)">
+								<g transform="translate(523.000000, 18.000000)">
+									<circle cx="6.5" cy="6.5" r="6.5"></circle>
+									<line x1="17.3000005" y1="17.3000005" x2="11.7000005" y2="11.7000005" stroke-linecap="round" stroke-linejoin="round"></line>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg></button>
 			</div>
 		</div>
+		<form class="filter__controls" id="filter__controls">
+			<div class="filter__controls--reset">
+				<button type="reset" data-filter="all">Show all</button>
+			</div>
+			<div class="filter__controls--options">
+				<div data-filter-group>
+					<p>Type:</p>
+					<?php the_filter_items( 'wrectype' ); ?>
+				</div>
+				<div data-filter-group>
+					<p>Categories:</p>
+					<?php the_filter_items( 'wreccategories' ); ?>
+				</div>
+				<div data-filter-group>
+					<p>Location:</p>
+					<?php the_filter_items( 'location' ); ?>
+				</div>
+			</div>
+			
+		</form>
 
 		<div class="filter__targets link-list">
 
