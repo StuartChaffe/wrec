@@ -23,8 +23,7 @@
 				'post_type' => 'post',
 				'posts_per_page' => 3,
 				'orderby' => 'date',
-				'order' => 'DESC',
-				'paged' => $paged,
+				'order' => 'DESC'
 			));
 		?>
 		<section class="posts link-list theme--green">
