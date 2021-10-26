@@ -27,12 +27,15 @@
 		<?php the_content(); ?>
 
 
-	<?php $courses = get_field('programme_courses');
-	if( $courses ): ?>
+	<?php
+		$courses = get_field('programme_courses');
+		$title = get_field('programme_courses_title');
+	?>
+		<?php if( $courses ) { ?>
 		<section class="courses link-list theme--blue">
-			<div class="link-list--title"><h2>Courses in this programme</h2></div>
-			<?php foreach( $courses as $post ): 
-				setup_postdata($post); ?>
+			<div class="link-list--title"><?php if( $title ) { ?><h2><?php echo $title; ?></h2><?php } else { ?><h2>Courses in this programme</h2> <?php } ?></div>
+			<?php foreach( $courses as $post ) { ?>
+			<?php setup_postdata($post); ?>
 				<?php
 					$images = get_field('images', get_the_ID());
 					$image = get_field('square_image', get_the_ID());
@@ -47,11 +50,11 @@
 					</div>
 				</a>
 				</div>
-			<?php endforeach; ?>
+			<?php } ?>
 			</div>
 		</section>
    		<?php wp_reset_postdata(); ?>
-	<?php endif; ?>
+		<?php } ?>
 	</main>	
 <?php endwhile; ?>
 

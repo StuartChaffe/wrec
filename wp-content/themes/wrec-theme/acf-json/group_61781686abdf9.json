@@ -3,6 +3,25 @@
     "title": "Courses",
     "fields": [
         {
+            "key": "field_61781bec510e4",
+            "label": "Title",
+            "name": "programme_courses_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_617816d241bc7",
             "label": "Select courses in programme",
             "name": "programme_courses",
@@ -45,5 +64,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635260270
+    "modified": 1635261453
 }
