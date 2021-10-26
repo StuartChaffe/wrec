@@ -1776,6 +1776,10 @@ body.nav-open {
   opacity: 0.3;
   text-decoration: none;
 }
+.mixitup-page-list .mixitup-control-prev, .mixitup-page-list .mixitup-control-next {
+  text-decoration: none;
+  font-weight: var(--font-weight-normal);
+}
 
 .post-title {
   display: flex;
