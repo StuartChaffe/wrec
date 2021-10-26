@@ -47,6 +47,10 @@
 				<p>Type:</p>
 				<?php the_filter_items( 'wrectype' ); ?>
 			</div>
+			<div>
+				<p>Search:</p>
+				<input type="text" id="filter-input" placeholder="Type here">
+			</div>
 		</div>
 
 		<div class="filter__targets link-list">
@@ -61,7 +65,7 @@
 					$categories = get_filter_classes( 'category' );
 				?>
 
-				<a href="<?php esc_url( the_permalink() ); ?>" class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item" title="Permalink to <?php the_title(); ?>">
+				<a href="<?php esc_url( the_permalink() ); ?>" class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item" title="Permalink to <?php the_title(); ?>" data-title="<?php the_title(); ?>">
 					<div class="link-list-item--image">
 						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div>
