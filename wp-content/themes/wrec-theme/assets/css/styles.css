@@ -1964,15 +1964,26 @@ body.nav-open {
 }
 
 .filter__controls {
+  display: flex;
+  align-items: flex-start;
   background: var(--color-grey-dark);
   color: white;
   padding: var(--spacing);
+}
+.filter__controls button:first-of-type {
+  margin-right: 3rem;
+}
+.filter__controls > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 3rem;
 }
 .filter__controls p {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
-  margin-left: 6px;
+  margin-left: 8px;
 }
 .filter__controls button {
   position: relative;
@@ -1986,11 +1997,12 @@ body.nav-open {
   transition: background 150ms, opacity 150ms, filter 150ms;
   vertical-align: top;
   border: none;
-  margin-right: 3px;
+  margin-bottom: 3px;
   border: 1px solid var(--color-grey-dark);
+  font-size: var(--font-size-small);
 }
 .filter__controls .mixitup-control-active {
-  background: var(--color-tertiary);
+  background: var(--color-primary);
   color: var(--color-text-base);
 }
 

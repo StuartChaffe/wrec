@@ -1,13 +1,25 @@
 .filter {
 	&__controls {
+		display: flex;
+		align-items: flex-start;
 		background: var(--color-grey-dark);
 		color: white;
 		padding: var(--spacing);
+
+		button:first-of-type {
+			margin-right: 3rem;
+		}
+		> div {
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+			margin-right: 3rem;
+		}
 		p {
 			color: white;
 			text-transform: uppercase;
 			font-size: 12px;
-			margin-left: 6px;
+			margin-left: 8px;
 		}
 
 		button {
@@ -15,23 +27,19 @@
 			overflow: hidden;
 			display: inline-block;
 			color: white;
-			// width: 2rem;
-			// height: 2rem;
 			background: var(--color-grey-dark);
 			cursor: pointer;
 			backface-visibility: hidden;
 			transition: background 150ms,opacity 150ms,filter 150ms;
 			vertical-align: top;
 			border: none;
-			margin-right: 3px;
+			margin-bottom: 3px;
 			border: 1px solid var(--color-grey-dark);
-			// font-size: .1px;
-			// font-family: zero-width;
+			font-size: var(--font-size-small);
 		}
 		.mixitup-control-active {
-			background: var(--color-tertiary);
+			background: var(--color-primary);
 			color: var(--color-text-base);
-			// border: 1px solid rgba(255,255,255, 0.5);
 		}
 	}
 }
