@@ -21,28 +21,18 @@
 		<?php } ?>
 		</div>
 	</section>
+	
+	
 	<main class="main">
 		<?php the_content(); ?>
-		<?php
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-			$courses = new WP_Query( array(
-				'post_type' => 'courses',
-				'posts_per_page' => 3,
-				'orderby' => 'date',
-				'order' => 'DESC',
-				'paged' => $paged,
-			));
 
-			global $wp_query;
-			$tmp_query = $wp_query;
-			$wp_query = null;
-			$wp_query = $courses;
-			$counter = 1;
-		?>
-		<?php if ($courses->have_posts()) : ?>
-			<section class="courses link-list theme--blue">
-				<div class="link-list--title"><h2>More Courses</h2></div>
-				<?php while($courses->have_posts()) : $courses->the_post(); ?>
+
+	<?php $courses = get_field('programme_courses');
+	if( $courses ): ?>
+		<section class="courses link-list theme--blue">
+			<div class="link-list--title"><h2>Courses in this programme</h2></div>
+			<?php foreach( $courses as $post ): 
+				setup_postdata($post); ?>
 				<?php
 					$images = get_field('images', get_the_ID());
 					$image = get_field('square_image', get_the_ID());
@@ -57,11 +47,11 @@
 					</div>
 				</a>
 				</div>
-					
-				<?php endwhile; wp_reset_query(); ?>
-				<a href="/courses" class="btn">Read More</a>
-			</section>
-		<?php endif; ?>
+			<?php endforeach; ?>
+			</div>
+		</section>
+   		<?php wp_reset_postdata(); ?>
+	<?php endif; ?>
 	</main>	
 <?php endwhile; ?>
 

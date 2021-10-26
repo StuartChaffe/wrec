@@ -3,14 +3,14 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	padding: var(--spacing);
-	padding-top: 10px;
+	// padding-top: 10px;
 	@include mq(medium) {
 		padding: var(--spacing-l);
-		padding-top: 10px;
+		// padding-top: 10px;
 	}
     @include mq(large) {
 		padding: calc(var(--spacing-xl) - 20px);
-		padding-top: 10px;
+		// padding-top: 10px;
 	}
 
 	&--title {

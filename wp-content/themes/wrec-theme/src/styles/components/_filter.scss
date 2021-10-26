@@ -1,6 +1,9 @@
 .filter {
 	padding-bottom: var(--spacing-l);
 	padding-top: var(--spacing-xl);
+	&__targets {
+		padding-top: 10px;
+	}
 	&__controls {
 		display: none;
 		flex-direction: column;

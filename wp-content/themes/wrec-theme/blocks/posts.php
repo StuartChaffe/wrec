@@ -40,7 +40,7 @@
 			<div class="search-form">
 				<label for="search" class="sr-only">Search</label>
 				<input type="text" name="s" id="filter-input" class="search-form__input" placeholder="Search" />
-				<button type="submit" class="search-form__submit"><span class="sr-only">Search</span><svg class="icon-search" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<button type="submit" class="search-form__submit"><span class="sr-only">Search</span> <button type="reset" data-filter="all">x</button> <svg class="icon-search" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<g id="Page-1" stroke="white" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g class="icon-search--stroke" transform="translate(-754.000000, -308.000000)" stroke-width="2">
 						<g transform="translate(232.000000, 157.000000)">

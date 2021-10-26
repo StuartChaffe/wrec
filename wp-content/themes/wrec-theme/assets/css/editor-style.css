@@ -995,6 +995,9 @@ input[type=radio] {
   padding-bottom: var(--spacing-l);
   padding-top: var(--spacing-xl);
 }
+.filter__targets {
+  padding-top: 10px;
+}
 .filter__controls {
   display: none;
   flex-direction: column;
@@ -1575,18 +1578,15 @@ ul.menu li {
   flex-direction: row;
   flex-wrap: wrap;
   padding: var(--spacing);
-  padding-top: 10px;
 }
 @media (min-width: 50em) {
   .link-list {
     padding: var(--spacing-l);
-    padding-top: 10px;
   }
 }
 @media (min-width: 70em) {
   .link-list {
     padding: calc(var(--spacing-xl) - 20px);
-    padding-top: 10px;
   }
 }
 .link-list--title {

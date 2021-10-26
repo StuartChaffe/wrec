@@ -4,7 +4,7 @@ add_action('init', 'origin_cpts');
 
 function origin_cpts() {
 	$post_type_name		= "courses";
-	$single_name		= "Courses";
+	$single_name		= "Course";
 	$plural_name		= "Courses";
 	$icon				= "dashicons-controls-play";
 	$gutenberg_enabled	= true;
@@ -54,7 +54,7 @@ function origin_cpts() {
 	$post_type_name		= "programmes";
 	$single_name		= "Programme";
 	$plural_name		= "Programmes";
-	$icon				= "dashicons-admin-users";
+	$icon				= "dashicons-controls-forward";
 	$gutenberg_enabled	= true;
 
 	$post_type_options = array(
