@@ -1,0 +1,37 @@
+.filter {
+	&__controls {
+		background: var(--color-grey-dark);
+		color: white;
+		padding: var(--spacing);
+		p {
+			color: white;
+			text-transform: uppercase;
+			font-size: 12px;
+			margin-left: 6px;
+		}
+
+		button {
+			position: relative;
+			overflow: hidden;
+			display: inline-block;
+			color: white;
+			// width: 2rem;
+			// height: 2rem;
+			background: var(--color-grey-dark);
+			cursor: pointer;
+			backface-visibility: hidden;
+			transition: background 150ms,opacity 150ms,filter 150ms;
+			vertical-align: top;
+			border: none;
+			margin-right: 3px;
+			border: 1px solid var(--color-grey-dark);
+			// font-size: .1px;
+			// font-family: zero-width;
+		}
+		.mixitup-control-active {
+			background: var(--color-tertiary);
+			color: var(--color-text-base);
+			// border: 1px solid rgba(255,255,255, 0.5);
+		}
+	}
+}
