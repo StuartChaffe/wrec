@@ -1,5 +1,11 @@
 var containerEl = document.querySelector('.filter');
 var inputEl = document.querySelector('#filter-input');
+var initialFilter = 'all';
+var hash = window.location.hash.replace(/^#/g, '');
+
+if (hash) {
+    initialFilter = '.' + hash;
+}
 
 var mixer = mixitup(containerEl, {
     animation: {
@@ -10,6 +16,9 @@ var mixer = mixitup(containerEl, {
     },
     pagination: {
         limit: 3
+    },
+    load: {
+        filter: initialFilter
     }
 });
 
