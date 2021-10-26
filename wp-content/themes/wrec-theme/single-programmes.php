@@ -34,8 +34,7 @@
 		<?php if( $courses ) { ?>
 		<section class="courses link-list theme--blue">
 			<div class="link-list--title"><?php if( $title ) { ?><h2><?php echo $title; ?></h2><?php } else { ?><h2>Courses in this programme</h2> <?php } ?></div>
-			<?php foreach( $courses as $post ) { ?>
-			<?php setup_postdata($post); ?>
+			<?php foreach( $courses as $course ) { ?>
 				<?php
 					$images = get_field('images', get_the_ID());
 					$image = get_field('square_image', get_the_ID());
@@ -46,14 +45,14 @@
 						<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</div>
 					<div class="link-list-item--content">
-						<p><?php the_title(); ?></p>
+						<p><?php echo $course->post_title; ?> </p>
 					</div>
 				</a>
 				</div>
 			<?php } ?>
 			</div>
 		</section>
-   		<?php wp_reset_postdata(); ?>
+   	
 		<?php } ?>
 	</main>	
 <?php endwhile; ?>
