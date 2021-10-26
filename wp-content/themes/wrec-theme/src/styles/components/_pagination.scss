@@ -29,3 +29,20 @@
 		// }
 	}
 }
+
+.mixitup-page-list {
+	// background-color: var(--color-grey-dark);
+	display: flex;
+	justify-content: center;
+
+	button {
+		background-color: var(--color-grey-dark);
+		color: white;
+		border: 0;
+		padding: 0.5rem 1rem;
+		margin: 0 2px;
+	}
+}
+.mixitup-control-disabled {
+	opacity: 0.3;
+}

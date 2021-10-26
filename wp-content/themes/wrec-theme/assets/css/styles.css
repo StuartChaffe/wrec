@@ -1963,6 +1963,25 @@ body.nav-open {
   padding: 0;
 }
 
+.mixitup-page-list {
+  display: flex;
+  justify-content: center;
+}
+.mixitup-page-list button {
+  background-color: var(--color-grey-dark);
+  color: white;
+  border: 0;
+  padding: 0.5rem 1rem;
+  margin: 0 2px;
+}
+
+.mixitup-control-disabled {
+  opacity: 0.3;
+}
+
+.filter {
+  padding-bottom: var(--spacing-l);
+}
 .filter__controls {
   display: flex;
   align-items: flex-start;
