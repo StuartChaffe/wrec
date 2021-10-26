@@ -1774,6 +1774,7 @@ body.nav-open {
 }
 .mixitup-page-list .mixitup-control-disabled {
   opacity: 0.3;
+  text-decoration: none;
 }
 
 .post-title {
