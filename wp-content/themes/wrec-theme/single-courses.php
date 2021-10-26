@@ -39,7 +39,7 @@
 			$wp_query = $courses;
 			$counter = 1;
 		?>
-		<?php if ($courses->have_posts()) : ?>
+		<?php if ($courses->have_posts()) { ?>
 			<section class="courses link-list theme--blue">
 				<div class="link-list--title"><h2>More Courses</h2></div>
 				<?php while($courses->have_posts()) : $courses->the_post(); ?>
@@ -61,7 +61,7 @@
 				<?php endwhile; wp_reset_query(); ?>
 				<a href="/courses" class="btn">Read More</a>
 			</section>
-		<?php endif; ?>
+		<?php } ?>
 	</main>	
 <?php endwhile; ?>
 
