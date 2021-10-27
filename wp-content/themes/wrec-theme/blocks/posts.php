@@ -63,7 +63,9 @@
 			</div>
 				<div data-filter-group>
 					<p>Categories:</p>
-					<?php the_filter_items( 'category' ); ?>
+					<div class="filter__controls--wrap">
+						<?php the_filter_items( 'category' ); ?>
+					</div>
 				</div>
 			</div>
 		</form>
