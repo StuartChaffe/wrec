@@ -800,6 +800,9 @@ input[type=radio] {
   }
 }
 .columns-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   text-align: center;
   padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-l);
@@ -817,6 +820,12 @@ input[type=radio] {
   .columns-item h1, .columns-item h2, .columns-item h3, .columns-item .heading-1, .columns-item .heading-2, .columns-item .heading-3 {
     margin-bottom: var(--spacing-l);
   }
+}
+.columns-item p {
+  margin-bottom: var(--spacing);
+}
+.columns-item .btn {
+  margin-top: auto;
 }
 
 .content {

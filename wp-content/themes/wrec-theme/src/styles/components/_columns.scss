@@ -10,6 +10,9 @@
 		margin-right: auto;
 	}
 	&-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		width: 100%;
 		text-align: center;
 		padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-l);
@@ -23,6 +26,12 @@
 			@include mq(medium) {
 				margin-bottom: var(--spacing-l);
 			}
+		}
+		p {
+			margin-bottom: var(--spacing);
+		}
+		.btn {
+			margin-top: auto;
 		}
 	}
 }
