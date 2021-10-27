@@ -23,15 +23,17 @@
 				margin-right: 3rem;
 			}
 		}
-
-		button:first-of-type {
-			margin-right: 3rem;
-		}
 		p {
 			color: white;
 			text-transform: uppercase;
 			font-size: 12px;
 			margin-left: 8px;
+			margin-bottom: 0.5rem;
+		}
+		&--wrap {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
 		}
 
 		button {
@@ -46,17 +48,25 @@
 			vertical-align: top;
 			border: none;
 			margin-bottom: 3px;
-			border: 1px solid var(--color-grey-dark);
+			margin-right: 3px;
 			font-size: var(--font-size-small);
 		}
 		&--reset {
+			display: flex;
+			flex-direction: row !important;
+			margin-left: auto;
+			margin-right: 0 !important;
 			button {
 				background: var(--color-secondary);
 				color: var(--color-text-base);
+				margin-right: 0.5rem !important;
+			}
+			.btn--filter {
+				background: white;
 			}
 		}
 		.mixitup-control-active {
-			background: var(--color-primary);
+			background: white;
 			color: var(--color-text-base);
 		}
 	}

@@ -50,6 +50,6 @@ inputEl.addEventListener('keydown', (event) => {
 // Show filter
 jQuery(function ($) {
     $(".btn--filter").click(function(){
-        $(".filter__controls").toggle();
+        $(".filter__controls").slideToggle(100);
     });
 })

@@ -64,15 +64,21 @@
 				</div>
 				<div data-filter-group>
 					<p>Categories:</p>
-					<?php the_filter_items( 'wreccategories' ); ?>
+					<div class="filter__controls--wrap">
+						<?php the_filter_items( 'wreccategories' ); ?>
+					</div>
 				</div>
 				<div data-filter-group>
 					<p>Location:</p>
-					<?php the_filter_items( 'location' ); ?>
+					<div class="filter__controls--wrap">
+						<?php the_filter_items( 'location' ); ?>
+					</div>
 				</div>
-			</div>
-			<div class="filter__controls--reset">
-				<button type="reset" data-filter="all">Show all</button>
+
+				<div class="filter__controls--reset">
+					<button type="reset" data-filter="all">Reset</button>
+					<button class="btn--filter" data-toggler="#filter-controls" data-toggle-clear="true" aria-label="Toggle the filter" aria-expanded="false">Close</button>
+				</div>
 			</div>
 			
 		</form>
