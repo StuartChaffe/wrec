@@ -870,24 +870,17 @@ input[type=radio] {
   margin-top: 1.5em;
   padding: 0;
 }
+.content ul, .content ol {
+  list-style: revert;
+  padding-left: 2rem;
+}
 .content li {
   position: relative;
-  padding-left: 1.2rem;
+  padding-left: 0.5rem;
   margin-bottom: 0.3em;
 }
 .content li p {
   display: inline;
-}
-.content li:before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.7rem;
-  line-height: 1;
-  font-weight: bold;
-  margin-right: 0.6em;
-  color: var(--color-text-dark);
 }
 @media (max-width: 49.99em) {
   .content p img {
