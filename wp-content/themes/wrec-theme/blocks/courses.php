@@ -8,7 +8,7 @@
 		'post_type' => array('courses', 'programmes'),
 		'posts_per_page' => -1,
 		'orderby' => 'date',
-		'order' => 'DESC',
+		'order' => 'DESC'
 	));
 
 	function the_filter_items( $tax ) {
@@ -31,7 +31,7 @@
 	}
 ?>
 
-<?php if ($courses->have_posts()) : ?>
+<?php if ($courses->have_posts()) : ?> 
 	<section class="filter courses theme--pink">
 		<div class="post-selection">
 			<div class="post-selection--filter">
@@ -87,8 +87,9 @@
 					$locations = get_filter_classes( 'location' );
 					$types = get_filter_classes( 'wrectype' );
 					$categories = get_filter_classes( 'wreccategories' );
+					$posttype = get_post_type();
 				?>
-				<div class="mix <?php echo $locations; echo $types; echo $categories; ?> link-list-item" data-title="<?php the_title(); ?>">
+				<div class="mix <?php echo $locations; echo $types; echo $categories; echo $posttype; ?> link-list-item" data-title="<?php the_title(); ?>">
 					<a href="<?php esc_url( the_permalink() ); ?>" class="link-list-item--link" title="Permalink to <?php the_title(); ?>">
 						<div class="link-list-item--image">
 							<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
