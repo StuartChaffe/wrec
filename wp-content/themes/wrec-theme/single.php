@@ -4,7 +4,6 @@
 	$image = get_field('large_image', get_the_ID());
 	$imagesquare = get_field('square_image', get_the_ID());
 	$author = get_field('author', get_the_ID());
-	$featuredposts = get_field( 'select_posts' );
 ?>
 <?php if ($image) { ?>
 	<section class="banner">
@@ -20,12 +19,8 @@
 	<main class="main">
 		<?php if ($author) { ?><div class="post-meta"><p><strong>Written by: <?php echo $author; ?></strong></p> <p><strong><?php echo do_shortcode('[rt_reading_time label="Read time:" postfix="mins" postfix_singular="min"]'); ?></strong></p></div><?php } ?>
 		<?php the_content(); ?>
-		
-
-		<?php if ( has_blocks( $featuredposts ) ) { ?>
-			I DONT HAVE ANY
-		<?php } ?>
-
+	
+		<?php if ( !has_block( 'acf/featured-posts' ) ) { ?>
 		<section class="posts link-list theme--green">
 			<div class="link-list--title"><h2>Our Blogs</h2></div>
 			<?php
@@ -57,6 +52,7 @@
 				<a href="/blog" class="btn">Read More</a>
 			</div>
 		</section>
+		<?php } ?>
 
 	</main>	
 <?php endwhile; ?>
