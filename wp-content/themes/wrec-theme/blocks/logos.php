@@ -11,12 +11,17 @@ $number = get_field('in_row');
 	<div class="logos <?php echo $number; ?>">
 	<?php while( have_rows('images') ): the_row();
 		$image = get_sub_field('image');
+		$content = get_sub_field('content');
 	?>
 		<div class="logos-item">
 			<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 			<div class="logos-item--content">
-				thisis s sdgfiun dfgli sudbfguoisbdfogusdfog
+				<?php if ($content) { ?>
+					<?php echo $content ?>
+					<?php } else { ?>
+					<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<?php } ?>
 			</div>
 		</div>
 	<?php endwhile; ?>

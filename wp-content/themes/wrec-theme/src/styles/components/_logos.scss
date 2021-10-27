@@ -79,14 +79,19 @@
 			// @include mq(medium) {
 			// 	padding: 2rem;
 			// }
+			
 		}
 		&:hover {
-			cursor: pointer;
 			img {
 				opacity: 0;
 			}
 			.logos-item--content {
 				opacity: 1;
+				cursor: pointer;
+				img {
+					opacity: 1;
+					cursor: default;
+				}
 			}
 		}
 	}

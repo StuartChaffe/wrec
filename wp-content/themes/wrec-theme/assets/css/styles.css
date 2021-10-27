@@ -1963,14 +1963,16 @@ body.nav-open {
   height: 100%;
   transition: opacity 0.2s ease-in-out;
 }
-.logos-item:hover {
-  cursor: pointer;
-}
 .logos-item:hover img {
   opacity: 0;
 }
 .logos-item:hover .logos-item--content {
   opacity: 1;
+  cursor: pointer;
+}
+.logos-item:hover .logos-item--content img {
+  opacity: 1;
+  cursor: default;
 }
 
 .image img {
