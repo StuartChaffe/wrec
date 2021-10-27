@@ -1902,11 +1902,6 @@ body.nav-open {
   justify-content: space-between;
   margin: 0 -1rem;
 }
-@media (min-width: 50em) {
-  .logos {
-    margin: 0 -3rem;
-  }
-}
 .logos--two .logos-item {
   width: calc(100% / 2);
 }
