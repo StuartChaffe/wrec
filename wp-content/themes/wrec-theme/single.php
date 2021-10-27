@@ -3,6 +3,8 @@
 <?php
 	$image = get_field('large_image', get_the_ID());
 	$imagesquare = get_field('square_image', get_the_ID());
+	$author = get_field('author', get_the_ID());
+	
 ?>
 <?php if ($image) { ?>
 	<section class="banner">
@@ -16,7 +18,7 @@
 		</div>
 	</section>
 	<main class="main">
-		<div class="post-meta"><p><strong>Written by: <?php echo get_the_author_meta('first_name'); ?> <?php echo get_the_author_meta('last_name'); ?></strong></p> <p><strong><?php echo do_shortcode('[rt_reading_time label="Read time:" postfix="mins" postfix_singular="min"]'); ?></strong></p></div>
+		<?php if ($author) { ?><div class="post-meta"><p><strong>Written by: <?php echo $author; ?></strong></p> <p><strong><?php echo do_shortcode('[rt_reading_time label="Read time:" postfix="mins" postfix_singular="min"]'); ?></strong></p></div><?php } ?>
 		<?php the_content(); ?>
 		<section class="posts link-list theme--green">
 			<div class="link-list--title"><h2>Our Blogs</h2></div>
