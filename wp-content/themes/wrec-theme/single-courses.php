@@ -59,7 +59,9 @@
 				</div>
 					
 				<?php endwhile; wp_reset_query(); ?>
-				<a href="/courses" class="btn">Read More</a>
+				<div class="link-list--button">
+					<a href="/courses" class="btn">Read More</a>
+				</div>
 			</section>
 		<?php } ?>
 	</main>	

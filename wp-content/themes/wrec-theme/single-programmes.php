@@ -25,8 +25,6 @@
 	
 	<main class="main">
 		<?php the_content(); ?>
-
-
 	<?php
 		$courses = get_field('programme_courses');
 		$title = get_field('programme_courses_title');

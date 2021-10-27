@@ -1802,6 +1802,10 @@ body.nav-open {
 .link-list-item--content {
   padding: var(--spacing);
 }
+.link-list--button {
+  width: 100%;
+  display: flex;
+}
 
 .post-title {
   display: flex;

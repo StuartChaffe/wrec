@@ -29,6 +29,8 @@ $bkg = get_field('bkg');
 		</div>
 	
 	<?php endforeach; ?>
-	<a href="/blog" class="btn">Read More</a>
+	<div class="link-list--button">
+		<a href="/blog" class="btn">Read More</a>
+	</div>
 	</section>
 <?php endif; ?>

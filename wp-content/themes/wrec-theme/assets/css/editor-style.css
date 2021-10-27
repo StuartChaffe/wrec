@@ -1664,6 +1664,10 @@ ul.menu li {
 .link-list-item--content {
   padding: var(--spacing);
 }
+.link-list--button {
+  width: 100%;
+  display: flex;
+}
 
 .locations {
   display: flex;
