@@ -872,7 +872,7 @@ input[type=radio] {
 }
 .content ul, .content ol {
   list-style: revert;
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 .content li {
   position: relative;
