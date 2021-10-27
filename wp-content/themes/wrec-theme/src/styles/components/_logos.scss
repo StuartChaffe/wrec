@@ -2,43 +2,92 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 0 -1rem;
-	@include mq(large) {
-		// margin: 0 -3rem;
-	}
 
 	&--two {
 		.logos-item {
-			width: calc(100% / 2);
+			&:nth-child(2n+1) {
+				margin-left: 0;
+			}
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
 		}
 	}
 	&--three {
 		.logos-item {
-			width: calc(100% / 2);
 			@include mq(medium) {
-				width: calc(100% / 3);
+				width: calc(100% / 3 - 3rem);
+				margin: 1rem 2rem;
+
+				&:nth-child(3n+1) {
+					margin-left: 0;
+				}
+				&:nth-child(3n+3) {
+					margin-right: 0;
+				}
 			}
 		}
 	}
 	&--four {
 		.logos-item {
-			width: calc(100% / 2);
 			@include mq(medium) {
-				width: calc(100% / 4);
+				width: calc(100% / 4 - 4rem);
+				margin: 1rem 2rem;
+				&:nth-child(4n+1) {
+					margin-left: 0;
+				}
+				&:nth-child(4n+4) {
+					margin-right: 0;
+				}
 			}
 		}
 	}
 	&-item {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 1rem;
-		@include mq(medium) {
-			padding: 2rem 3rem;
+
+		width: calc(100% / 2 - 1rem);
+		margin: 1rem;
+		@include mq($until: medium) {
+			&:nth-child(2n+1) {
+				margin-left: 0;
+			}
+			&:nth-child(2n+2) {
+				margin-right: 0;
+			}
 		}
+		
 
 		img {
 			width: 100%;
+			opacity: 1;
+			transition: opacity .2s ease-in-out;
+		}
+		&--content {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transition: opacity .2s ease-in-out;
+			// padding: 1rem;
+			// @include mq(medium) {
+			// 	padding: 2rem;
+			// }
+		}
+		&:hover {
+			cursor: pointer;
+			img {
+				opacity: 0;
+			}
+			.logos-item--content {
+				opacity: 1;
+			}
 		}
 	}
 }

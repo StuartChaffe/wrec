@@ -14,6 +14,10 @@ $number = get_field('in_row');
 	?>
 		<div class="logos-item">
 			<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+			<div class="logos-item--content">
+				thisis s sdgfiun dfgli sudbfguoisbdfogusdfog
+			</div>
 		</div>
 	<?php endwhile; ?>
 	</div>
