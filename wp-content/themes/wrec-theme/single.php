@@ -23,10 +23,9 @@
 			<?php
 				$the_query = new WP_Query( array(
 					'post_type' => 'post',
-					'posts_per_page' => 3,
+					'posts_per_page' => 2,
 					'orderby' => 'date',
 					'order' => 'DESC',
-					'paged' => $paged,
 				));
 			?>
 		
@@ -45,7 +44,7 @@
 					</div>
 				</a>
 			</div>
-			<?php endwhile; wp_reset_postdata();?>
+			<?php endwhile;?>
 			<a href="/blog" class="btn">Read More</a>
 		</section>
 
