@@ -3,6 +3,7 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	padding: var(--spacing);
+	padding-bottom: 0;
 	// padding-top: 10px;
 	@include mq(medium) {
 		padding: var(--spacing-l);

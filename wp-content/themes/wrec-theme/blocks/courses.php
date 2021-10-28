@@ -60,7 +60,9 @@
 			<div class="filter__controls--options">
 				<div data-filter-group>
 					<p>Type:</p>
-					<?php the_filter_items( 'wrectype' ); ?>
+					<div class="filter__controls--wrap">
+						<?php the_filter_items( 'wrectype' ); ?>
+					</div>
 				</div>
 				<div data-filter-group>
 					<p>Categories:</p>

@@ -590,18 +590,28 @@ input[type=radio] {
 .search-form__submit {
   position: absolute;
   top: 0;
-  right: 0.5rem;
+  right: 0.25rem;
   width: 50px;
   height: 100%;
   background: none;
   border: 0;
+}
+@media (min-width: 50em) {
+  .search-form__submit {
+    right: 0.5rem;
+  }
 }
 .search-form input[type=email], .search-form input[type=number], .search-form input[type=search], .search-form input[type=text], .search-form input[type=tel], .search-form input[type=url], .search-form input[type=password], .search-form select, .search-form textarea {
   background-color: var(--color-grey-dark);
   font-weight: var(--font-weight-normal);
   color: white;
   margin-bottom: 0;
-  padding: 0.8rem 3.5rem 0.8rem 1rem;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+}
+@media (min-width: 50em) {
+  .search-form input[type=email], .search-form input[type=number], .search-form input[type=search], .search-form input[type=text], .search-form input[type=tel], .search-form input[type=url], .search-form input[type=password], .search-form select, .search-form textarea {
+    padding: 0.8rem 3.5rem 0.8rem 1rem;
+  }
 }
 .search-form ::-moz-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -1005,7 +1015,12 @@ input[type=radio] {
   }
 }
 .filter__targets {
-  padding-top: 10px;
+  padding-top: var(--spacing);
+}
+@media (min-width: 50em) {
+  .filter__targets {
+    padding-top: 10px;
+  }
 }
 .filter__controls {
   display: none;
@@ -1013,13 +1028,24 @@ input[type=radio] {
   align-items: flex-start;
   background: var(--color-grey-dark);
   color: white;
-  padding: var(--spacing);
-  margin: 0 calc(var(--spacing-xl) - 10px);
+  padding: var(--spacing-s);
+  margin: 0 var(--spacing);
+}
+@media (min-width: 50em) {
+  .filter__controls {
+    margin: 0 calc(var(--spacing-xl) - 10px);
+    padding: var(--spacing);
+  }
 }
 .filter__controls--options {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+}
+@media (min-width: 50em) {
+  .filter__controls--options {
+    flex-direction: row;
+  }
 }
 .filter__controls--options > div {
   display: flex;
@@ -1031,13 +1057,25 @@ input[type=radio] {
   color: white;
   text-transform: uppercase;
   font-size: 12px;
-  margin-left: 8px;
-  margin-bottom: 0.5rem;
+  margin-left: 6px;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 50em) {
+  .filter__controls p {
+    margin-left: 8px;
+    margin-bottom: 0.5rem;
+  }
 }
 .filter__controls--wrap {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 50em) {
+  .filter__controls--wrap {
+    margin-bottom: 0;
+  }
 }
 .filter__controls button {
   position: relative;
@@ -1600,6 +1638,7 @@ ul.menu li {
   flex-direction: row;
   flex-wrap: wrap;
   padding: var(--spacing);
+  padding-bottom: 0;
 }
 @media (min-width: 50em) {
   .link-list {
