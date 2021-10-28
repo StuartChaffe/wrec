@@ -1976,6 +1976,7 @@ body.nav-open {
 }
 @media (max-width: 49.99em) {
   .post-selection--filter button {
+    margin-top: 2px;
     padding: 0.8rem 1rem 0.8rem 1rem;
   }
 }
