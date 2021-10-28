@@ -7,4 +7,12 @@ jQuery(document).ready(function($) {
 		$("body").toggleClass("menu-active");
 		$menuContainer.toggleClass("is-active");
 	});
+	// $(window).scroll(function() {    
+	// 	var scroll = $(window).scrollTop();
+	// 	if (scroll >= 0) {
+	// 		$(".global-header--nav__mobile").addClass("darkHeader");
+	// 	} else {
+	// 		$('.global-header--nav__mobile').removeClass('darkHeader');
+	// 	 }
+	// });
 });

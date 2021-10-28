@@ -46,6 +46,9 @@
 			font-size: 12px;
 			margin-left: 6px;
 			margin-bottom: 0.25rem;
+			@include mq($until: medium) {
+				border-bottom: 1px solid white;
+			}
 			@include mq(medium) {
 				margin-left: 8px;
 				margin-bottom: 0.5rem;

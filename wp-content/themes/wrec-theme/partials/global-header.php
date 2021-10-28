@@ -6,5 +6,5 @@
 			<?php the_field('strapline_text', 'options'); ?>
 			<nav class="global-header--nav global-header--nav-desktop"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>		</div>
 	</div>
-	<nav class="global-header--nav global-header--nav-mobile"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>
 </header>
+<nav class="global-header--nav global-header--nav-mobile"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>

@@ -91,10 +91,6 @@ dd {
   margin: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 /* Set core body defaults */
 html,
 body {
@@ -1060,6 +1056,11 @@ input[type=radio] {
   margin-left: 6px;
   margin-bottom: 0.25rem;
 }
+@media (max-width: 49.99em) {
+  .filter__controls p {
+    border-bottom: 1px solid white;
+  }
+}
 @media (min-width: 50em) {
   .filter__controls p {
     margin-left: 8px;
@@ -1264,6 +1265,7 @@ input[type=radio] {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.9rem;
+  padding-bottom: 0;
   z-index: 9;
 }
 @media (min-width: 50em) {
@@ -1288,6 +1290,7 @@ input[type=radio] {
   padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   width: 100%;
+  height: auto;
 }
 @media (min-width: 50em) {
   .global-header--content {
@@ -1307,15 +1310,17 @@ input[type=radio] {
 }
 .global-header--nav {
   align-items: center;
-  height: 100%;
-  padding: 0 0.5rem;
+  z-index: 999;
+  background-color: var(--color-grey-dark);
+  padding: 1rem 0.5rem;
   margin-left: auto;
   margin-top: auto;
-  padding-bottom: 1.3rem;
 }
 @media (min-width: 50em) {
   .global-header--nav {
+    background-color: transparent;
     display: flex;
+    height: 100%;
     padding: 0;
     margin-right: 1rem;
   }
@@ -1333,6 +1338,8 @@ input[type=radio] {
 }
 .global-header--nav-mobile {
   display: flex;
+  position: sticky;
+  top: 0;
 }
 @media (min-width: 50em) {
   .global-header--nav-mobile {
@@ -1976,7 +1983,6 @@ body.nav-open {
 }
 @media (max-width: 49.99em) {
   .post-selection--filter button {
-    margin-top: 2px;
     padding: 0.8rem 1rem 0.8rem 1rem;
   }
 }
