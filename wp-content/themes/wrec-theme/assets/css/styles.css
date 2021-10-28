@@ -614,7 +614,7 @@ input[type=radio] {
   position: relative;
   display: flex;
   align-items: flex-start;
-  width: 60%;
+  width: 100%;
 }
 @media (min-width: 50em) {
   .search-form {
@@ -1877,12 +1877,17 @@ body.nav-open {
   }
 }
 .post-selection--filter {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: 20px;
 }
 @media (max-width: 49.99em) {
   .post-selection--filter {
-    width: 40%;
+    width: 60px;
+  }
+}
+@media (min-width: 50em) {
+  .post-selection--filter {
+    margin-left: auto;
   }
 }
 .post-selection--filter button {

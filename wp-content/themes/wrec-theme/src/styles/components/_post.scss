@@ -46,10 +46,13 @@
 			padding: 0 calc(var(--spacing-xl) - 10px);
 		}
 		&--filter {
-			margin-left: auto;
+			margin-left: 0;
 			margin-right: 20px;
 			@include mq($until: medium) {
-				width: 40%;
+				width: 60px;
+			}
+			@include mq(medium) {
+				margin-left: auto;
 			}
 			button {
 				@include mq($until: medium) {

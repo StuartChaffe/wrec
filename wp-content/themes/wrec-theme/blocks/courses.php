@@ -35,13 +35,25 @@
 	<section class="filter courses theme--pink">
 		<div class="post-selection">
 			<div class="post-selection--filter">
-				<button class="btn btn--filter" data-toggler="#filter-controls" data-toggle-clear="true" aria-label="Toggle the filter" aria-expanded="false">Filter</button>
+				<button class="btn btn--filter" data-toggler="#filter-controls" data-toggle-clear="true" aria-label="Toggle the filter" aria-expanded="false"><span class="hidemobile">Filter</span>
+				<svg width="22px" height="17px" class="icon-filter hidedesktop" viewBox="0 0 22 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<g id="Group" transform="translate(1.000000, 0.000000)">
+							<line x1="0.5" y1="2.5" x2="19.5" y2="2.5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+							<line x1="0.5" y1="8.5" x2="19.5" y2="8.5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+							<line x1="0.5" y1="14.5" x2="19.5" y2="14.5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+							<rect id="Rectangle" fill="#FFFFFF" x="5" y="0" width="5" height="5" rx="2.5"></rect>
+							<rect id="Rectangle" fill="#FFFFFF" x="12" y="6" width="5" height="5" rx="2.5"></rect>
+							<rect id="Rectangle" fill="#FFFFFF" x="3" y="12" width="5" height="5" rx="2.5"></rect>
+						</g>
+					</g>
+				</svg></button>
 			</div>
 			<div class="search-form">
 				<label for="search" class="sr-only">Search</label>
 				<input type="text" name="s" id="filter-input" class="search-form__input" placeholder="Search" />
 				<button type="submit" class="search-form__submit"><span class="sr-only">Search</span><svg class="icon-search" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				<g id="Page-1" stroke="white" stroke-width="1" fill="none" fill-rule="evenodd">
+				<g stroke="white" stroke-width="1" fill="none" fill-rule="evenodd">
 					<g class="icon-search--stroke" transform="translate(-754.000000, -308.000000)" stroke-width="2">
 						<g transform="translate(232.000000, 157.000000)">
 							<g transform="translate(0.000000, 134.000000)">
