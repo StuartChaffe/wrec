@@ -11,7 +11,7 @@
 		'order' => 'DESC'
 	));
 
-	function filter_items( $tax ) {
+	function the_filter_items( $tax ) {
 		$terms = get_terms( $tax );
 		foreach ( $terms as $term ) {
 			echo '<button type="button" data-toggle=".' . $term->slug . '">' . $term->name . '</button>';
@@ -73,19 +73,17 @@
 				<div data-filter-group>
 					<p>Type:</p>
 					<div class="filter__controls--wrap">
-						<?php filter_items( 'wrectype' ); ?>
+						<?php the_filter_items( 'wrectype' ); ?>
 					</div>
 				</div>
 				<div data-filter-group>
 					<p>Categories:</p>
-					<div class="filter__controls--wrap">
-						<?php filter_items( 'wreccategories' ); ?>
-					</div>
+					<?php the_filter_items( 'wreccategories' ); ?>
 				</div>
 				<div data-filter-group>
 					<p>Location:</p>
 					<div class="filter__controls--wrap">
-						<?php filter_items( 'location' ); ?>
+						<?php the_filter_items( 'location' ); ?>
 					</div>
 				</div>
 
