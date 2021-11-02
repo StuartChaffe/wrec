@@ -2157,6 +2157,7 @@ body.nav-open {
           backface-visibility: hidden;
   transition: background 150ms, opacity 150ms, filter 150ms;
   vertical-align: top;
+  text-align: left;
   border: none;
   margin-bottom: 3px;
   margin-right: 3px;

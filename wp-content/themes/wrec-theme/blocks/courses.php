@@ -82,9 +82,7 @@
 				</div>
 				<div data-filter-group>
 					<p>Location:</p>
-					<div class="filter__controls--wrap">
 						<?php the_filter_items( 'location' ); ?>
-					</div>
 				</div>
 
 				<div class="filter__controls--reset">
