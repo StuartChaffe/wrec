@@ -199,7 +199,8 @@ ul.menu {
 	padding-left: 0;
 	li {
 		padding-left: 0;
-		display: inline-block;
+		display: flex;
+    	text-align: center;
 	}
 }
 
