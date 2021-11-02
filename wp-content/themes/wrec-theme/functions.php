@@ -20,3 +20,6 @@ require_once( 'lib/vendors.php' );
 
 // Helper functions
 require_once( 'lib/helpers.php' );
+
+// Helper functions
+require_once( 'lib/filter.php' );
