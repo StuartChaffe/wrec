@@ -11,7 +11,7 @@
 		'order' => 'DESC',
 	));
 
-	function the_filter_items( $tax ) {
+	function the_post_filter_items( $tax ) {
 		$terms = get_terms( $tax );
 		foreach ( $terms as $term ) {
 			echo '<button type="button" data-toggle=".' . $term->slug . '">' . $term->name . '</button>';
@@ -64,7 +64,7 @@
 				<div data-filter-group>
 					<p>Categories:</p>
 					<div class="filter__controls--wrap">
-						<?php the_filter_items( 'category' ); ?>
+						<?php the_post_filter_items( 'category' ); ?>
 					</div>
 				</div>
 			</div>
