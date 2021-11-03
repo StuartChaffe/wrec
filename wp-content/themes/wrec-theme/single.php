@@ -22,7 +22,10 @@
 	
 		<?php if ( !has_block( 'acf/featured-posts' ) ) { ?>
 		<section class="posts link-list theme--green">
-			<div class="link-list--title"><h2>Our Blogs</h2></div>
+		<?php
+			$related = get_field('related_content');
+		?>
+			<div class="link-list--title"><h2><?php if ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>Our Blogs<?php } ?></h2></div>
 			<?php
 				$the_query = new WP_Query( array(
 					'post_type' => 'post',
@@ -49,7 +52,7 @@
 			</div>
 			<?php endwhile;?>
 			<div class="link-list--button">
-				<a href="/blog" class="btn">Read More</a>
+				<a href="/blog" class="btn"><?php if ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
 			</div>
 		</section>
 		<?php } ?>

@@ -24,24 +24,19 @@
 	<main class="main">
 		<?php the_content(); ?>
 		<?php
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$courses = new WP_Query( array(
 				'post_type' => 'courses',
 				'posts_per_page' => 3,
 				'orderby' => 'date',
 				'order' => 'DESC',
-				'paged' => $paged,
 			));
 
-			global $wp_query;
-			$tmp_query = $wp_query;
-			$wp_query = null;
-			$wp_query = $courses;
 			$counter = 1;
+			$related = get_field('related_content');
 		?>
 		<?php if ($courses->have_posts()) { ?>
 			<section class="courses link-list theme--blue">
-				<div class="link-list--title"><h2>More Courses</h2></div>
+				<div class="link-list--title"><h2><?php if ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>More Courses<?php } ?></h2></div>
 				<?php while($courses->have_posts()) : $courses->the_post(); ?>
 				<?php
 					$images = get_field('images', get_the_ID());
@@ -60,7 +55,7 @@
 					
 				<?php endwhile; wp_reset_query(); ?>
 				<div class="link-list--button">
-					<a href="/courses" class="btn">Read More</a>
+					<a href="/courses" class="btn"><?php if ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
 				</div>
 			</section>
 		<?php } ?>

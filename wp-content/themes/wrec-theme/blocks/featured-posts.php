@@ -5,6 +5,7 @@
 $featuredposts = get_field( 'select_posts' );
 $title = get_field( 'posts_title' );
 $bkg = get_field('bkg');
+$button = get_field('button_text');
 ?>
 
 
@@ -30,7 +31,7 @@ $bkg = get_field('bkg');
 	
 	<?php endforeach; ?>
 	<div class="link-list--button">
-		<a href="/blog" class="btn">Read More</a>
+		<a href="/blog" class="btn"><?php if ($button) { ?><?php echo $button ?><?php } else { ?>Read More<?php } ?></a>
 	</div>
 	</section>
 <?php endif; ?>
