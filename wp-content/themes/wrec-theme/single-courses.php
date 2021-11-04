@@ -33,10 +33,12 @@
 
 			$counter = 1;
 			$related = get_field('related_content');
+			$globaltitle = get_field( 'featured_courses_title', 'options' );
+			$globalbutton = get_field( 'featured_courses_button', 'options' );
 		?>
 		<?php if ($courses->have_posts()) { ?>
 			<section class="courses link-list theme--blue">
-				<div class="link-list--title"><h2><?php if ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>More Courses<?php } ?></h2></div>
+				<div class="link-list--title"><h2><?php if ($globaltitle) { ?><?php echo $globaltitle; ?><?php } elseif ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>More Courses<?php } ?></h2></div>
 				<?php while($courses->have_posts()) : $courses->the_post(); ?>
 				<?php
 					$images = get_field('images', get_the_ID());
@@ -55,7 +57,7 @@
 					
 				<?php endwhile; wp_reset_query(); ?>
 				<div class="link-list--button">
-					<a href="/courses" class="btn"><?php if ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
+					<a href="/courses" class="btn"><?php if ($globalbutton) { ?><?php echo $globalbutton; ?><?php } elseif ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
 				</div>
 			</section>
 		<?php } ?>

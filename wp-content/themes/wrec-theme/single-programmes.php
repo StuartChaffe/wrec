@@ -28,6 +28,7 @@
 	<?php
 		$courses = get_field('programme_courses');
 		$title = get_field('programme_courses_title');
+		$related = get_field('related_content');
 	?>
 		<?php if( $courses ) { ?>
 		<section class="courses link-list theme--blue">

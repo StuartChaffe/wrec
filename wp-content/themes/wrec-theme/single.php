@@ -24,8 +24,10 @@
 		<section class="posts link-list theme--green">
 		<?php
 			$related = get_field('related_content');
+			$globaltitle = get_field( 'featured_blogs_title', 'options' );
+			$globalbutton = get_field( 'featured_blogs_button', 'options' );
 		?>
-			<div class="link-list--title"><h2><?php if ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>Our Blogs<?php } ?></h2></div>
+			<div class="link-list--title"><h2><?php if ($globaltitle) { ?><?php echo $globaltitle; ?><?php } elseif ($related['title']) { ?><?php echo $related['title']; ?><?php } else { ?>Our Blogs<?php } ?></h2></div>
 			<?php
 				$the_query = new WP_Query( array(
 					'post_type' => 'post',
@@ -52,7 +54,7 @@
 			</div>
 			<?php endwhile;?>
 			<div class="link-list--button">
-				<a href="/blog" class="btn"><?php if ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
+				<a href="/blog" class="btn"><?php if ($globalbutton) { ?><?php echo $globalbutton; ?><?php } elseif ($related['button']) { ?><?php echo $related['button'] ?><?php } else { ?>Read More<?php } ?></a>
 			</div>
 		</section>
 		<?php } ?>
