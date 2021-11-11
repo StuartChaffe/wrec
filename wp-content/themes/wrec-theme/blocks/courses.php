@@ -57,13 +57,15 @@
 						<?php the_filter_items( 'wrectype' ); ?>
 					</div>
 				</div>
-				<div data-filter-group>
+				<!-- <div data-filter-group>
 					<p>Categories:</p>
 					<?php the_filter_items( 'wreccategories' ); ?>
-				</div>
+				</div> -->
 				<div data-filter-group>
 					<p>Location:</p>
+					<div class="filter__controls--wrap">
 						<?php the_filter_items( 'location' ); ?>
+					</div>
 				</div>
 
 				<div class="filter__controls--reset">
