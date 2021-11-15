@@ -12,8 +12,13 @@ $number = get_field('in_row');
 	<?php while( have_rows('images') ): the_row();
 		$image = get_sub_field('image');
 		$content = get_sub_field('content');
+		$link = get_sub_field('link');
 	?>
+		<?php if ($link) { ?>
+		<a href="<?php echo $link['url']; ?>" class="logos-item">
+		<?php } else { ?>
 		<div class="logos-item">
+		<?php } ?>
 			<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
 			<div class="logos-item--content">
@@ -23,7 +28,11 @@ $number = get_field('in_row');
 					<img loading="lazy" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 				<?php } ?>
 			</div>
+		<?php if ($link) { ?>
+		</a>
+		<?php } else { ?>
 		</div>
+		<?php } ?>
 	<?php endwhile; ?>
 	</div>
 </section>

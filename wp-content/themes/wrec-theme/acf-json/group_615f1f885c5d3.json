@@ -109,6 +109,21 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_61922afc8ab61",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -130,5 +145,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635354384
+    "modified": 1636969286
 }
