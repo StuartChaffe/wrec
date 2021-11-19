@@ -21,7 +21,7 @@
             enable: true
         },
         pagination: {
-            limit: 14
+            limit: 99
         },
         load: {
             filter: initialFilter
