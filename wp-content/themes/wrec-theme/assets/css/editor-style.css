@@ -19,6 +19,7 @@
   --color-secondary: #4CD0DE;
   --color-tertiary: #B0FBB5;
   --color-quaternary: #F2EDF1;
+  --color-secondary-light: #d9ebea;
   --color-text-base: var(--color-grey-dark);
   --color-text-dark: #000;
   --color-text-reversed: #fff;
@@ -1256,7 +1257,7 @@ input[type=radio] {
 
 .global-header {
   z-index: 9;
-  background-color: var(--color-grey-dark);
+  background-color: var(--color-secondary-light);
 }
 .global-header--inner {
   display: flex;
