@@ -1049,12 +1049,7 @@ input[type=radio] {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 981px) and (max-width: 1215px) {
-  .global-header--nav ul li a {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 1216px) {
+@media screen and (min-width: 981px) {
   .global-header--nav ul li a {
     font-size: 18px;
   }
