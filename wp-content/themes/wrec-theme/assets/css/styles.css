@@ -1125,7 +1125,6 @@ ul.menu {
 ul.menu li {
   padding-left: 0;
   display: flex;
-  text-align: center;
 }
 
 .global-header--nav__mobile.is-active {
