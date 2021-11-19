@@ -1324,7 +1324,7 @@ input[type=radio] {
   }
 }
 .global-header--content p {
-  color: white;
+  color: var(--color-text-base);
   margin-top: 0;
   font-weight: var(--font-weight-light);
   font-size: 14px;
@@ -1389,7 +1389,7 @@ input[type=radio] {
 }
 .global-header--nav ul li a {
   position: relative;
-  color: white;
+  color: var(--color-text-base);
   margin: 0 0.1rem;
   font-weight: var(--font-weight-normal);
   text-decoration: none;
@@ -1408,7 +1408,7 @@ input[type=radio] {
   }
 }
 .global-header--nav ul li a:hover {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
