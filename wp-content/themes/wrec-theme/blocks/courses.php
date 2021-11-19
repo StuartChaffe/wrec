@@ -76,7 +76,7 @@
 			
 		</form>
 
-		<div class="filter__targets link-list">
+		<div class="filter__targets link-list" id="filter">
 
 			<?php while($courses->have_posts()) : $courses->the_post(); ?>
 
