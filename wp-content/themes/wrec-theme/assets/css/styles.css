@@ -914,6 +914,7 @@ input[type=radio] {
 }
 .global-header--inner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex: 1 0 auto;
   width: 100%;
@@ -925,12 +926,14 @@ input[type=radio] {
 }
 @media (min-width: 50em) {
   .global-header--inner {
+    flex-direction: row;
     padding: 0.9rem 1.3rem;
   }
 }
 .global-header--logos {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .global-header--logo {
   width: 240px;
@@ -955,14 +958,16 @@ input[type=radio] {
   }
 }
 .global-header--content {
-  margin-left: 1rem;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  text-align: center;
+  margin-left: 0;
+  padding: 0.5rem 3rem;
   width: 100%;
   height: auto;
 }
 @media (min-width: 50em) {
   .global-header--content {
+    padding: 0.5rem 0;
+    text-align: left;
     margin-left: 1rem;
   }
 }

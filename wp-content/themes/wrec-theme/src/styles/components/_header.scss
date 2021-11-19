@@ -8,6 +8,7 @@
 
 	&--inner {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		// align-items: flex-start;
 		flex: 1 0 auto;
@@ -18,12 +19,15 @@
 		padding-bottom: 0;
 		z-index: 9;
 		@include mq(medium) {
+			flex-direction: row;
 			padding: 0.9rem 1.3rem;
 		}
 	}
 	&--logos {
 		display: flex;
 		align-items: center;
+		justify-content: center;
+
 	}
 	&--logo {
 		width: 240px;
@@ -44,12 +48,14 @@
 		}
 	}
 	&--content {
-		margin-left: 1rem;
-		padding-bottom: 0.5rem;
-		padding-top: 0.5rem;
+		text-align: center;
+		margin-left: 0;
+		padding: 0.5rem 3rem;
 		width: 100%;
 		height: auto;
 		@include mq(medium) {
+			padding: 0.5rem 0;
+			text-align: left;
 			margin-left: 1rem;
 		}
 		@include mq(large) {
