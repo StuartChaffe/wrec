@@ -8,7 +8,7 @@
 
 <footer class="global-footer">
 	<div class="global-footer__inner">
-		<div class="global-footer--logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo.png" alt="Whitehead Ross Logo" /></a></div>
+		<div class="global-footer--logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/src/images/logo-white.png" alt="Whitehead Ross Logo" /></a></div>
 
 		<div class="global-footer--content">
 			<div class="global-footer--contacts">
