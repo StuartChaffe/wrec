@@ -1263,7 +1263,7 @@ input[type=radio] {
   justify-content: center;
   flex: 1 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container);
   margin: 0 auto;
   padding: 0.9rem;
   padding-bottom: 0;
@@ -1274,17 +1274,31 @@ input[type=radio] {
     padding: 0.9rem 1.3rem;
   }
 }
+.global-header--logos {
+  display: flex;
+  align-items: center;
+}
 .global-header--logo {
   width: 240px;
   z-index: 1;
 }
 @media (min-width: 50em) {
   .global-header--logo {
-    width: 282px;
+    width: 240px;
   }
 }
 .global-header--logo a {
   display: block;
+}
+.global-header--logo-2 {
+  width: 100px;
+  z-index: 1;
+  margin-left: 1rem;
+}
+@media (min-width: 50em) {
+  .global-header--logo-2 {
+    width: 100px;
+  }
 }
 .global-header--content {
   margin-left: 1rem;
@@ -1294,6 +1308,11 @@ input[type=radio] {
   height: auto;
 }
 @media (min-width: 50em) {
+  .global-header--content {
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 70em) {
   .global-header--content {
     margin-left: 2.5rem;
   }

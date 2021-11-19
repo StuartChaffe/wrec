@@ -12,7 +12,7 @@
 		// align-items: flex-start;
 		flex: 1 0 auto;
 		width: 100%;
-		max-width: 1200px;
+		max-width: var(--container);
 		margin: 0 auto;
 		padding: 0.9rem;
 		padding-bottom: 0;
@@ -21,14 +21,26 @@
 			padding: 0.9rem 1.3rem;
 		}
 	}
+	&--logos {
+		display: flex;
+		align-items: center;
+	}
 	&--logo {
 		width: 240px;
 		z-index: 1;
 		@include mq(medium) {
-			width: 282px;
+			width: 240px;
 		}
 		a {
 			display: block;
+		}
+	}
+	&--logo-2 {
+		width: 100px;
+		z-index: 1;
+		margin-left: 1rem;
+		@include mq(medium) {
+			width: 100px;
 		}
 	}
 	&--content {
@@ -38,6 +50,9 @@
 		width: 100%;
 		height: auto;
 		@include mq(medium) {
+			margin-left: 1rem;
+		}
+		@include mq(large) {
 			margin-left: 2.5rem;
 		}
 		p {
