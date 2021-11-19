@@ -7,7 +7,7 @@
 			<nav class="global-header--nav global-header--nav-desktop"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>
 		</div>
 		
-		<div class="global-header--logo-2"><img src="<?php echo get_template_directory_uri(); ?>/src/images/ESF-logo.png" alt="European Union Logo" /></div>
+		<div class="global-header--logo-2"><img src="<?php echo get_template_directory_uri(); ?>/src/images/ESF-logo.jpg" alt="European Union Logo" /></div>
 	</div>
 </header>
 <nav class="global-header--nav global-header--nav-mobile"><?php wp_nav_menu( array('theme_location' => 'primary') ); ?></nav>

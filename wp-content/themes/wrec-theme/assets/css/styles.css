@@ -943,7 +943,7 @@ input[type=radio] {
   display: block;
 }
 .global-header--logo-2 {
-  width: 110px;
+  width: 120px;
   z-index: 1;
 }
 @media (max-width: 49.99em) {
@@ -954,7 +954,7 @@ input[type=radio] {
 }
 @media (min-width: 50em) {
   .global-header--logo-2 {
-    width: 110px;
+    width: 120px;
   }
 }
 .global-header--content {
