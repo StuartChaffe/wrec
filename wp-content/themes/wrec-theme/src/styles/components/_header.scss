@@ -51,8 +51,7 @@
 		width: 100%;
 		height: auto;
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
+		flex-direction: row;
 		@include mq($until: medium) {
 			order: 3;
 		}
@@ -60,6 +59,7 @@
 			padding: 0 1.5rem;
 			text-align: left;
 			flex-direction: row;
+			flex-wrap: wrap;
 			// margin-left: 0;
 		}
 		@include mq(large) {

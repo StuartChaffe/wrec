@@ -1,5 +1,5 @@
 .search {
-	padding: var(--spacing) 0;
+	padding: var(--spacing);
 	display: flex;
 	flex-direction: column;
 	// align-items: center;
@@ -9,14 +9,23 @@
 
 	.search-form {
 		margin: 0 auto;
-		margin-top: var(--spacing-xxl);
+		margin-top: var(--spacing);
+		@include mq(medium) {
+			margin-top: var(--spacing-xxl);
+		}
 	}
 	&-results {
 		margin-top: var(--spacing-l);
-		padding: 0 var(--spacing-xxl);
+		padding: 0;
+		@include mq(medium) {
+			padding: 0 var(--spacing-xxl);
+		}
 		&-item {
 			border-bottom: 1px solid var(--color-grey);
-			padding: var(--spacing) 30% var(--spacing) 0;
+			padding: var(--spacing) 0;
+			@include mq(medium) {
+				padding: var(--spacing) 30% var(--spacing) 0;
+			}
 			h2, h3, h4, h5 {
 				margin-bottom: 0;
 				color: var(--color-text-base);
