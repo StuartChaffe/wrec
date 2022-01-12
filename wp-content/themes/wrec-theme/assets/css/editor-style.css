@@ -2171,10 +2171,16 @@ body.nav-open {
   padding: var(--spacing);
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--spacing-xxl);
 }
 @media (min-width: 50em) {
   .search {
     padding: 0 0 var(--spacing-xxl) 0;
+  }
+}
+@media (max-width: 49.99em) {
+  .search h2 {
+    margin-top: 0;
   }
 }
 .search .search-form {
