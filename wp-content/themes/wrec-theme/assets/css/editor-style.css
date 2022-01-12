@@ -1329,7 +1329,7 @@ input[type=radio] {
 }
 @media (min-width: 50em) {
   .global-footer--contacts-list-item {
-    padding: 0;
+    padding: 0 0.5rem 0 0;
   }
 }
 .global-footer--contacts-list-item p {
@@ -1393,7 +1393,7 @@ input[type=radio] {
 .global-footer p {
   color: white;
   margin: 0;
-  font-size: var(--font-size-small);
+  font-size: 16px;
 }
 
 .global-header {

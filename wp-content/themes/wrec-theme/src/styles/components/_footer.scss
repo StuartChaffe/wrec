@@ -60,7 +60,7 @@
 					}
 				}
 				@include mq(medium) {
-					padding: 0;
+					padding: 0 0.5rem 0 0;
 				}
 				p {
 					font-weight: var(--font-weight-light);
@@ -127,5 +127,5 @@
 .global-footer p {
 	color: white;
 	margin: 0;
-	font-size: var(--font-size-small);
+	font-size: 16px;
 }
