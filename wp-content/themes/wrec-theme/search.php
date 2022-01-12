@@ -13,6 +13,7 @@ $total_results = $wp_query->found_posts;
 			<div class="search-results-item">
 				<h4><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></a></h4>
 				<?php the_excerpt(); ?>
+				<a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>">View page <svg class="icon icon--arrow"><use xlink:href="#arrow"></use></svg></a>
 			</div>
 		<?php endwhile; ?>
 	</div>
