@@ -51,6 +51,7 @@
 		width: 100%;
 		height: auto;
 		display: flex;
+		flex-wrap: wrap;
 		flex-direction: column;
 		@include mq($until: medium) {
 			order: 3;
@@ -58,6 +59,7 @@
 		@include mq(medium) {
 			padding: 0 1.5rem;
 			text-align: left;
+			flex-direction: row;
 			// margin-left: 0;
 		}
 		@include mq(large) {
@@ -72,6 +74,12 @@
 				font-size: 18px;
 			}
 		}
+		.icon-search {
+			margin-left: auto;
+			color: var(--color-text-base);
+			stroke: var(--color-text-base);
+			margin-top: 3px;
+		}
 	}
 	&--nav {
 		align-items: center;
@@ -81,6 +89,7 @@
 		padding: 1rem 0.5rem;
 		// margin-left: auto;
 		margin-top: auto;
+		width: 100%;
 		
 		@include mq(medium) {
 			background-color: transparent;

@@ -1448,6 +1448,7 @@ input[type=radio] {
   width: 100%;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 @media (max-width: 49.99em) {
@@ -1459,6 +1460,7 @@ input[type=radio] {
   .global-header--content {
     padding: 0 1.5rem;
     text-align: left;
+    flex-direction: row;
   }
 }
 .global-header--content p {
@@ -1472,12 +1474,19 @@ input[type=radio] {
     font-size: 18px;
   }
 }
+.global-header--content .icon-search {
+  margin-left: auto;
+  color: var(--color-text-base);
+  stroke: var(--color-text-base);
+  margin-top: 3px;
+}
 .global-header--nav {
   align-items: center;
   z-index: 999;
   background-color: var(--color-secondary-light);
   padding: 1rem 0.5rem;
   margin-top: auto;
+  width: 100%;
 }
 @media (min-width: 50em) {
   .global-header--nav {
