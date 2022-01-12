@@ -19,10 +19,12 @@
 						$name = get_sub_field('location_name');
 						$tel = get_sub_field('location_tel');
 						$email = get_sub_field('location_email');
+						$address = get_sub_field('location_address');
 					?>
 					<div class="global-footer--contacts-list-item">
 						<p><?php echo $name ?>: <?php echo $tel ?></p>
 						<a href="mailto:<?php echo $email ?>"><p><?php echo $email ?></p></a>
+						<?php if ($address) { ?><p><?php echo $address ?></p><?php } ?>
 					</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
