@@ -31,6 +31,7 @@ remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
  */
 add_theme_support( 'editor-styles' );
 add_editor_style( 'assets/css/editor-style.css' );
+add_post_type_support( 'page', 'excerpt' );
 
 
 /**

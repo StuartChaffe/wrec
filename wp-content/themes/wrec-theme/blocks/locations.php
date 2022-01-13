@@ -14,10 +14,12 @@ $title = get_field('locations_title');
 			$name = get_sub_field('location_name');
 			$tel = get_sub_field('location_tel');
 			$email = get_sub_field('location_email');
+			$address = get_sub_field('location_address');
 		?>
 			<div class="locations-item">
 				<p><?php echo $name ?>: <?php echo $tel ?></p>
 				<a href="mailto:<?php echo $email ?>"><p><?php echo $email ?></p></a>
+				<?php if ($address) { ?><?php echo $address ?><?php } ?>
 			</div>
 		<?php endwhile; ?>
 		</div>
