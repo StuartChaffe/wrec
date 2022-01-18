@@ -1326,6 +1326,7 @@ body.nav-open {
   width: 50%;
   margin-bottom: 1rem;
   line-height: 1.2;
+  word-break: break-all;
   padding: 0 0.5rem;
 }
 @media (max-width: 49.99em) {
