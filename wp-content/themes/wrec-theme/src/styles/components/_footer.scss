@@ -50,6 +50,7 @@
 				margin-bottom: 1rem;
 				line-height: 1.2;
 				word-break: break-word;
+				word-wrap: break-word;
 				padding: 0 0.5rem;
 				@include mq($until: medium) {
 					&:nth-child(odd) {

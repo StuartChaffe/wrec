@@ -5,8 +5,17 @@
 		width: calc(100% / 2);
 		padding-right: 1rem;
 		margin-bottom: 2rem;
+		@include mq($until: medium) {
+			font-size: 15px;
+		}
 		@include mq(medium) {
 			width: calc(100% / 3);
+		}
+		p {
+			word-wrap: break-word;
+			@include mq($until: medium) {
+				font-size: 15px;
+			}
 		}
 		a {
 			color: var(--color-text-base);
