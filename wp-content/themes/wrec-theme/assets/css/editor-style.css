@@ -1337,6 +1337,7 @@ input[type=radio] {
   margin-bottom: 1rem;
   line-height: 1.2;
   word-break: break-word;
+  word-wrap: break-word;
   padding: 0 0.5rem;
 }
 @media (max-width: 49.99em) {
@@ -1938,9 +1939,22 @@ ul.menu li {
   padding-right: 1rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 49.99em) {
+  .locations-item {
+    font-size: 15px;
+  }
+}
 @media (min-width: 50em) {
   .locations-item {
     width: calc(100% / 3);
+  }
+}
+.locations-item p {
+  word-wrap: break-word;
+}
+@media (max-width: 49.99em) {
+  .locations-item p {
+    font-size: 15px;
   }
 }
 .locations-item a {
