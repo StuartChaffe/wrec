@@ -36,7 +36,7 @@
 		?>
 			<div class="accordion__item">
 				<button aria-expanded="false" class="accordion__handle" aria-controls="accordion-<?php echo sanitize_title($title); ?>" id="<?php echo sanitize_title($title); ?>">
-					<div class="accordion__title"><?php echo $title; ?> <svg class="icon icon--arrow"><use xlink:href="#arrow"></use></svg></div>
+					<a href="#<?php echo sanitize_title($title); ?>" class="accordion__title"><?php echo $title; ?> <svg class="icon icon--arrow"><use xlink:href="#arrow"></use></svg></a>
 				</button>
 				<div class="accordion__body" id="accordion-<?php echo sanitize_title($title); ?>" role="region" aria-labelledby="<?php echo sanitize_title($title); ?>">
 					<?php echo $content ?>

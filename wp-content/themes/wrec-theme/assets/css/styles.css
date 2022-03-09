@@ -1484,7 +1484,7 @@ body.nav-open {
   border: none;
   background: none;
   outline: none;
-  padding: 1rem 3rem 1rem 1.5rem;
+  padding: 0;
   width: 100%;
   background-color: var(--color-secondary);
   font-weight: var(--font-weight-bold);
@@ -1493,7 +1493,7 @@ body.nav-open {
 }
 @media (min-width: 50em) {
   .accordion__handle {
-    padding: var(--spacing);
+    padding: 0;
   }
 }
 .accordion__handle .icon--arrow {
@@ -1509,6 +1509,7 @@ body.nav-open {
   cursor: pointer;
   background-color: var(--color-secondary);
   transition: 0.3s all ease-in-out;
+  text-decoration: none;
 }
 .accordion__handle .is-active {
   background-color: var(--color-secondary);
@@ -1533,11 +1534,22 @@ body.nav-open {
 .accordion__title {
   margin: 0 !important;
   color: var(--color-text-dark);
+  padding: 1rem 3rem 1rem 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .accordion__title {
+    padding: var(--spacing);
+  }
 }
 .is-small .accordion__title {
   text-transform: none;
   font-size: var(--font-size-h6);
   font-weight: normal;
+}
+.accordion__title:hover {
+  text-decoration: none;
 }
 
 .accordion__body {
